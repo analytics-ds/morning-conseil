@@ -95,10 +95,43 @@ Concurrents a citer avec prudence (ce sont les concurrents du client) : WeWork, 
 
 ### A faire avant la mise en ligne
 
+Fait :
+
+- Repo GitHub : `analytics-ds/morning-conseil` (public, comme tous les blogs du reseau)
+- GitHub Pages actif en mode `workflow`. URL de demo : https://analytics-ds.github.io/morning-conseil/
+- Logo officiel Morning en place dans le header (`static/images/morning-logo.svg`, version blanche de la navbar morning.fr)
+
+Reste a faire :
+
 - Faire creer le sous-domaine `conseil.morning.fr` par Morning (CNAME vers `analytics-ds.github.io`)
-- Ajouter le `static/CNAME` avec `conseil.morning.fr` (volontairement absent pour l'instant)
-- Recuperer le logo Morning aupres du client (le header utilise pour l'instant un wordmark texte) et un favicon
-- Creer le repo GitHub `analytics-ds/morning-conseil` via `/github-setup`
+- Une fois le DNS en place : renseigner le domaine personnalise dans Settings > Pages, ajouter `static/CNAME` avec `conseil.morning.fr`, puis activer « Enforce HTTPS »
+- Remplacer le favicon provisoire (`static/favicon.svg`, derive des couleurs du logo) par celui fourni par le client
+- Rediger les 6 articles en anglais (`content/en/blog/` ne contient que `_index.md`)
+- Mettre a jour `static/llms.txt` avec les URLs et titres reels
+
+### Piege : URLs et sous-repertoire
+
+Tant que le site est servi sur l'URL de demo, il vit dans le sous-repertoire
+`/morning-conseil/`. Deux comportements de Hugo cassent les liens dans ce cas :
+
+- `relURL` n'ajoute PAS le sous-chemin du baseURL si le chemin commence par un slash
+- le `.URL` d'une entree de menu contient DEJA ce sous-chemin, mais perd le prefixe
+  de langue en EN
+
+Ne jamais appeler `relURL` / `relLangURL` directement sur un chemin a slash initial.
+Utiliser les deux partials dedies :
+
+- `{{ partial "asset.html" "/images/x.webp" }}` pour un fichier statique
+- `{{ partial "link.html" .URL }}` pour un lien interne sensible a la langue
+
+Verification apres build, sur les deux baseURL :
+
+```bash
+hugo --quiet --baseURL "https://analytics-ds.github.io/morning-conseil/" -d /tmp/mc-test
+hugo --quiet -d /tmp/mc-public
+```
+
+puis controler qu'aucun `href` / `src` interne ne pointe vers un fichier absent.
 
 ## Regles generales
 
