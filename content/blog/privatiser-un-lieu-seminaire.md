@@ -3,6 +3,7 @@ title: "Privatiser un lieu pour un séminaire à Paris"
 description: "Capacité, budget, contraintes techniques et clauses contractuelles : la checklist à passer avant de signer une privatisation."
 date: 2026-08-10
 lastmod: 2026-08-27
+translationKey: "post-private-hire-venue-paris"
 categories: ["Organisation evenement"]
 tags: ["evenementiel", "paris"]
 image: "/images/blog/evenementiel-morning.webp"

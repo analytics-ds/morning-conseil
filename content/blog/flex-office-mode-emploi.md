@@ -3,6 +3,7 @@ title: "Flex office : mode d'emploi et pièges à éviter"
 description: "Comment dimensionner un plateau en flex office, quel ratio de postes retenir et quelles erreurs font échouer la moitié des projets."
 date: 2026-08-14
 lastmod: 2026-08-27
+translationKey: "post-flex-office"
 categories: ["Productivite"]
 tags: ["organisation", "bureaux"]
 image: "/images/blog/bureaux-morning-flex-office.webp"

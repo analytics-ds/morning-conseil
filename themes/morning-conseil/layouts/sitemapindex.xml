@@ -1,10 +1,22 @@
 {{ printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-{{- $baseURL := site.BaseURL | strings.TrimSuffix "/" }}
+{{- /* Ce template sort un urlset, PAS un sitemapindex, et c'est volontaire.
+
+       Avec defaultContentLanguageInSubdir = false, la langue par defaut n'est pas
+       servie dans un sous-repertoire : son urlset et l'index multilingue visent
+       tous les deux /sitemap.xml. Les deux fichiers se marchent dessus et le
+       sitemap FR se retrouvait vide.
+
+       Renommer ne resout rien : [languages.fr.sitemap] filename est ignore,
+       [outputFormats.sitemap] basename et [outputFormats.sitemapindex] baseName
+       n'ont aucun effet sur le chemin emis, et [sitemap] filename s'applique
+       AUSSI a l'index, donc la collision se deplace simplement.
+
+       On rend donc la collision inoffensive : les deux templates sortent un
+       urlset valide. /sitemap.xml contient toutes les URLs des deux langues,
+       /en/sitemap.xml contient celles de l'anglais. Quel que soit le fichier qui
+       gagne l'ecriture, /sitemap.xml reste un sitemap valide et non vide. */ -}}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 {{- range site.Sites }}
-  <sitemap>
-    <loc>{{ $baseURL }}/{{ .Language.Lang }}/sitemap.xml</loc>
-    <lastmod>{{ now.Format "2006-01-02T15:04:05-07:00" }}</lastmod>
-  </sitemap>
+{{- partial "sitemap-urls.html" .Pages }}
 {{- end }}
-</sitemapindex>
+</urlset>

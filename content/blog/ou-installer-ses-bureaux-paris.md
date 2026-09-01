@@ -3,6 +3,7 @@ title: "Où installer ses bureaux à Paris : les quartiers à comparer"
 description: "Accessibilité, budget au poste, image et vie de quartier : la méthode pour arbitrer entre les principales zones d'implantation parisiennes."
 date: 2026-08-16
 lastmod: 2026-08-27
+translationKey: "post-where-to-locate-offices-paris"
 categories: ["Location de bureaux"]
 tags: ["bureaux", "paris"]
 image: "/images/blog/design-espace-travail-morning.webp"

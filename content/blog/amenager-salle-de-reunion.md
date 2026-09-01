@@ -3,6 +3,7 @@ title: "Aménager une salle de réunion : acoustique, lumière, mobilier"
 description: "Surface par personne, traitement acoustique, éclairage et équipement visio : les règles concrètes d'une salle réellement utilisable."
 date: 2026-08-12
 lastmod: 2026-08-27
+translationKey: "post-meeting-room-design"
 categories: ["Salle de reunion"]
 tags: ["amenagement", "bureaux"]
 image: "/images/blog/salle-reunion-morning.webp"

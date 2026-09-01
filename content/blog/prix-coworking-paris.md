@@ -3,6 +3,7 @@ title: "Prix d'un coworking à Paris : les tarifs réels en 2026"
 description: "Comparatif des tarifs au poste et à la journée, arrondissement par arrondissement, et détail de ce qui fait varier la facture."
 date: 2026-08-20
 lastmod: 2026-08-27
+translationKey: "post-coworking-prices-paris"
 categories: ["Coworking"]
 tags: ["bureaux", "paris"]
 image: "/images/blog/coworking-espace-morning.webp"

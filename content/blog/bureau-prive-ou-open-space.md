@@ -3,6 +3,7 @@ title: "Bureau privé ou open space : comment choisir"
 description: "Les critères qui départagent réellement les deux formules : confidentialité, densité d'appels, budget et rythme de croissance."
 date: 2026-08-18
 lastmod: 2026-08-27
+translationKey: "post-private-office-vs-open-space"
 categories: ["Location de bureaux"]
 tags: ["bureaux", "organisation"]
 image: "/images/blog/bureau-privatif-morning.webp"

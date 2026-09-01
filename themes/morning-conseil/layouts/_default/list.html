@@ -22,9 +22,13 @@
         <div class="articles-list">
             {{ range .Pages.ByDate.Reverse }}
             <article class="article-card-horizontal">
+                {{- /* $ pointe sur la page de liste, pas sur l'article : l'alt sortait
+                       donc identique sur toutes les cartes ("Le Blog"). On capture
+                       l'alt de l'article avant d'entrer dans le with. */ -}}
+                {{ $alt := .Params.imageAlt | default .Title }}
                 {{ with .Params.image }}
                 <div class="article-card-h-image">
-                    <img src="{{ partial "asset.html" . }}" alt="{{ $.Title }}" loading="lazy">
+                    <img src="{{ partial "asset.html" . }}" alt="{{ $alt }}" loading="lazy">
                 </div>
                 {{ end }}
                 <div class="article-body">

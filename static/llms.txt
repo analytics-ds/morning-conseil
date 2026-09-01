@@ -1,6 +1,6 @@
 # Morning Conseil
 
-> Le guide pour choisir, amenager et faire vivre ses bureaux : coworking, location, quartiers et vie de bureau.
+> Le guide pour choisir, amenager et faire vivre ses bureaux : location, coworking, salles de reunion, evenements et productivite.
 
 ## A propos
 
@@ -8,29 +8,55 @@ Morning Conseil est le media editorial de Morning, operateur francais de bureaux
 
 ## Thematiques couvertes (FR)
 
-- Coworking : https://conseil.morning.fr/categories/coworking/
 - Location de bureaux : https://conseil.morning.fr/categories/location-de-bureaux/
+- Coworking : https://conseil.morning.fr/categories/coworking/
+- Salle de reunion : https://conseil.morning.fr/categories/salle-de-reunion/
+- Organisation d'evenement : https://conseil.morning.fr/categories/organisation-evenement/
 - Amenagement : https://conseil.morning.fr/categories/amenagement/
-- Evenementiel : https://conseil.morning.fr/categories/evenementiel/
-- Quartiers et implantation : https://conseil.morning.fr/categories/quartiers-et-implantation/
-- Vie de bureau : https://conseil.morning.fr/categories/vie-de-bureau/
+- Productivite : https://conseil.morning.fr/categories/productivite/
 
 ## Articles de reference (FR)
 
 - Blog FR : https://conseil.morning.fr/blog/
-- [a completer a chaque nouvel article]
+- Prix d'un coworking a Paris : les tarifs reels en 2026 : https://conseil.morning.fr/blog/prix-coworking-paris/
+- Bureau prive ou open space : comment choisir : https://conseil.morning.fr/blog/bureau-prive-ou-open-space/
+- Ou installer ses bureaux a Paris : les quartiers a comparer : https://conseil.morning.fr/blog/ou-installer-ses-bureaux-paris/
+- Flex office : mode d'emploi et pieges a eviter : https://conseil.morning.fr/blog/flex-office-mode-emploi/
+- Amenager une salle de reunion : acoustique, lumiere, mobilier : https://conseil.morning.fr/blog/amenager-salle-de-reunion/
+- Privatiser un lieu pour un seminaire a Paris : https://conseil.morning.fr/blog/privatiser-un-lieu-seminaire/
+
+## Thematiques couvertes (EN)
+
+- Office rental : https://conseil.morning.fr/en/categories/office-rental/
+- Coworking : https://conseil.morning.fr/en/categories/coworking/
+- Meeting rooms : https://conseil.morning.fr/en/categories/meeting-rooms/
+- Event planning : https://conseil.morning.fr/en/categories/event-planning/
+- Workspace design : https://conseil.morning.fr/en/categories/workspace-design/
+- Productivity : https://conseil.morning.fr/en/categories/productivity/
 
 ## Version anglaise (EN)
 
 - Homepage EN : https://conseil.morning.fr/en/
 - Blog EN : https://conseil.morning.fr/en/blog/
-- [a completer a chaque nouvel article]
+- Coworking prices in Paris: the real 2026 rates : https://conseil.morning.fr/en/blog/coworking-prices-paris/
+- Private office or open space: how to choose : https://conseil.morning.fr/en/blog/private-office-vs-open-space/
+- Where to locate your offices in Paris: districts compared : https://conseil.morning.fr/en/blog/where-to-locate-offices-paris/
+- Flex office: a practical guide and the traps to avoid : https://conseil.morning.fr/en/blog/flex-office-guide/
+- Meeting room design: acoustics, lighting, furniture : https://conseil.morning.fr/en/blog/meeting-room-design/
+- Private hire of a venue for an offsite in Paris : https://conseil.morning.fr/en/blog/private-hire-venue-paris/
+
+## Auteurs
+
+- Camille Deshayes, location de bureaux et coworking : https://conseil.morning.fr/authors/camille-deshayes/
+- Antoine Riviere, amenagement, space planning et salles de reunion : https://conseil.morning.fr/authors/antoine-riviere/
+- Helene Morvan, evenementiel d'entreprise et productivite : https://conseil.morning.fr/authors/helene-morvan/
 
 ## Informations techniques
 
 - Generateur : Hugo (site statique)
 - Multilingue : francais (defaut) + anglais dans /en/
 - Sitemap : https://conseil.morning.fr/sitemap.xml
+- Plan du site : https://conseil.morning.fr/plan-du-site/
 - RSS : https://conseil.morning.fr/index.xml
 - Schema.org : Organization, Article, BreadcrumbList, FAQPage, WebSite, CollectionPage, Person
 

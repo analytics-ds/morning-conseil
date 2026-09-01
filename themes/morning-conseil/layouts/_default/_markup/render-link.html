@@ -1,0 +1,14 @@
+{{- /* Resout les liens ecrits dans le markdown des articles.
+
+       Un lien interne est ecrit sans prefixe de langue (ex: /blog/mon-article/).
+       On le passe dans link.html qui retrouve la page reelle dans la langue
+       courante et renvoie son RelPermalink : le prefixe /en/ et le sous-chemin
+       du baseURL sont donc ajoutes tout seuls. Sans ce hook, un lien absolu
+       ecrit en dur part en 404 des que le site est servi dans un sous-repertoire
+       (page de projet GitHub Pages) ou depuis la version anglaise. */ -}}
+{{- $dest := .Destination -}}
+{{- $external := or (hasPrefix $dest "http") (hasPrefix $dest "//") (hasPrefix $dest "mailto:") -}}
+{{- if and (not $external) (hasPrefix $dest "/") -}}
+  {{- $dest = partial "link.html" $dest -}}
+{{- end -}}
+<a href="{{ $dest }}"{{ with .Title }} title="{{ . }}"{{ end }}{{ if $external }} target="_blank" rel="noopener"{{ end }}>{{ .Text | safeHTML }}</a>
