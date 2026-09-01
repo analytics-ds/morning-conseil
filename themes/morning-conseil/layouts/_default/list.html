@@ -8,7 +8,7 @@
     {{ end }}
 {{ end }}
 
-<section class="list-header{{ if $bannerImage }} has-banner{{ end }}"{{ if $bannerImage }} style="background-image: url('{{ $bannerImage }}')"{{ end }}>
+<section class="list-header{{ if $bannerImage }} has-banner{{ end }}"{{ if $bannerImage }} style="background-image: url('{{ partial "asset.html" $bannerImage }}')"{{ end }}>
     <div class="list-header-overlay"></div>
     <div class="container list-header-content">
         <h1>{{ .Title }}</h1>
@@ -24,7 +24,7 @@
             <article class="article-card-horizontal">
                 {{ with .Params.image }}
                 <div class="article-card-h-image">
-                    <img src="{{ . }}" alt="{{ $.Title }}" loading="lazy">
+                    <img src="{{ partial "asset.html" . }}" alt="{{ $.Title }}" loading="lazy">
                 </div>
                 {{ end }}
                 <div class="article-body">

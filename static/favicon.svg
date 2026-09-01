@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Morning Conseil">
+  <rect width="64" height="64" rx="14" fill="#10100f"/>
+  <path d="M14 44V22h7.2l6.4 12.4L34 22h7.2v22h-6.6V32.6L29.9 44h-4.6l-4.7-11.4V44z" fill="#f0eae4"/>
+  <circle cx="47.5" cy="41" r="4.5" fill="#ff5955"/>
+</svg>

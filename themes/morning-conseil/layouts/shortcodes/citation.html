@@ -20,7 +20,7 @@
     <blockquote>{{ .Inner | markdownify }}</blockquote>
     {{- with $name }}
     <figcaption class="expert-quote-author">
-        {{ with $avatar }}<img src="{{ . | relURL }}" alt="" class="expert-quote-avatar" width="44" height="44" loading="lazy">{{ end }}
+        {{ with $avatar }}<img src="{{ partial "asset.html" . }}" alt="" class="expert-quote-avatar" width="44" height="44" loading="lazy">{{ end }}
         <span class="expert-quote-meta">
             <span class="expert-quote-name">{{ if $url }}<a href="{{ $url }}">{{ $name }}</a>{{ else }}{{ $name }}{{ end }}</span>
             {{ with $role }}<span class="expert-quote-role">{{ . }}</span>{{ end }}

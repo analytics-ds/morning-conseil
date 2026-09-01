@@ -15,7 +15,7 @@
       <div class="plan-site-col">
         <h2 class="plan-site-title">{{ if $isEN }}Main pages{{ else }}Pages principales{{ end }}</h2>
         <ul class="plan-site-list">
-          <li><a href="{{ "/" | relLangURL }}">{{ if $isEN }}Home{{ else }}Accueil{{ end }}</a></li>
+          <li><a href="{{ partial "link.html" "/" }}">{{ if $isEN }}Home{{ else }}Accueil{{ end }}</a></li>
           {{ $legalSlugs := slice "mentions-legales" "politique-de-confidentialite" "legal-notice" "privacy-policy" "cgu" "cookies" }}
           {{ range (where (where .Site.RegularPages "Kind" "page") "Section" "") }}
             {{ $slug := path.Base (strings.TrimSuffix "/" .RelPermalink) }}

@@ -9,7 +9,7 @@
         <div class="author-hero-inner">
             {{ with $author }}
             {{ with .avatar }}
-            <img src="{{ . | relURL }}" alt="{{ $author.name }}" class="author-hero-avatar" width="128" height="128" loading="eager">
+            <img src="{{ partial "asset.html" . }}" alt="{{ $author.name }}" class="author-hero-avatar" width="128" height="128" loading="eager">
             {{ end }}
             <div class="author-hero-content">
                 <span class="author-hero-label">{{ if $isFR }}Auteur{{ else }}Author{{ end }}</span>
@@ -37,7 +37,7 @@
             <article class="article-card">
                 {{ with .Params.image }}
                 <div class="article-card-image">
-                    <img src="{{ . }}" alt="{{ $.Title }}" loading="lazy">
+                    <img src="{{ partial "asset.html" . }}" alt="{{ $.Title }}" loading="lazy">
                 </div>
                 {{ end }}
                 <div class="article-card-body">

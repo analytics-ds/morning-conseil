@@ -1,0 +1,10 @@
+{{- /* Resout un chemin d'asset statique en URL valide, y compris quand le site
+       est servi dans un sous-repertoire (page de projet GitHub Pages).
+
+       relURL n'ajoute PAS le sous-chemin du baseURL quand le chemin commence
+       par un slash : "/images/x.webp" ressort tel quel et part en 404 sur
+       https://compte.github.io/repo/. On retire donc le slash de tete avant
+       d'appeler relURL.
+
+       Usage : {{ partial "asset.html" .Params.image }} */ -}}
+{{- . | strings.TrimPrefix "/" | relURL -}}

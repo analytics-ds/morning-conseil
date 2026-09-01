@@ -14,7 +14,7 @@
                     {{ range .Site.Menus.main }}
                     {{ if eq .Identifier "thematiques" }}
                     {{ range .Children }}
-                    <li><a href="{{ .URL | relLangURL }}">{{ .Name }}</a></li>
+                    <li><a href="{{ partial "link.html" .URL }}">{{ .Name }}</a></li>
                     {{ end }}
                     {{ end }}
                     {{ end }}
@@ -25,7 +25,7 @@
                 <ul>
                     {{ range .Site.Menus.main }}
                     {{ if and (not .Parent) (ne .URL "#") }}
-                    <li><a href="{{ .URL | relLangURL }}">{{ .Name }}</a></li>
+                    <li><a href="{{ partial "link.html" .URL }}">{{ .Name }}</a></li>
                     {{ end }}
                     {{ end }}
                     <li><a href="{{ if $isFR }}{{ "plan-du-site/" | relLangURL }}{{ else }}{{ "site-map/" | relLangURL }}{{ end }}">{{ if $isFR }}Plan du site{{ else }}Site map{{ end }}</a></li>

@@ -4,7 +4,7 @@
 {{ $author := index .Site.Data.authors (.Params.author | default "") }}
 
 <article class="single-article">
-    <header class="article-header{{ with .Params.image }} has-banner{{ end }}"{{ with .Params.image }} style="background-image: url('{{ . }}')"{{ end }}>
+    <header class="article-header{{ with .Params.image }} has-banner{{ end }}"{{ with .Params.image }} style="background-image: url('{{ partial "asset.html" . }}')"{{ end }}>
         <div class="article-header-overlay"></div>
         <div class="container article-header-content">
             <div class="article-meta">
@@ -22,7 +22,7 @@
             {{ end }}
             {{ with $author }}
             <div class="article-author">
-                {{ with .avatar }}<img src="{{ . | relURL }}" alt="{{ $author.name }}" class="article-author-avatar" width="40" height="40" loading="lazy">{{ end }}
+                {{ with .avatar }}<img src="{{ partial "asset.html" . }}" alt="{{ $author.name }}" class="article-author-avatar" width="40" height="40" loading="lazy">{{ end }}
                 <span class="author-label">{{ if $isFR }}Par{{ else }}By{{ end }}</span>
                 <a href="{{ (printf "authors/%s/" $author.id) | relLangURL }}" class="author-name">{{ .name }}</a>
             </div>
@@ -88,7 +88,7 @@
     <aside class="author-box">
         <div class="container container-narrow">
             <div class="author-box-inner">
-                {{ with .avatar }}<img src="{{ . | relURL }}" alt="{{ $author.name }}" class="author-box-avatar" width="88" height="88" loading="lazy">{{ end }}
+                {{ with .avatar }}<img src="{{ partial "asset.html" . }}" alt="{{ $author.name }}" class="author-box-avatar" width="88" height="88" loading="lazy">{{ end }}
                 <div class="author-box-content">
                     <span class="author-box-label">{{ if $isFR }}Ecrit par{{ else }}Written by{{ end }}</span>
                     <h2><a href="{{ (printf "authors/%s/" .id) | relLangURL }}">{{ .name }}</a></h2>
@@ -125,7 +125,7 @@
                 {{ range . }}
                 <a href="{{ .RelPermalink }}" class="link-carousel-card">
                     {{ with .Params.image }}
-                    <span class="link-carousel-media"><img src="{{ . | relURL }}" alt="" loading="lazy"></span>
+                    <span class="link-carousel-media"><img src="{{ partial "asset.html" . }}" alt="" loading="lazy"></span>
                     {{ end }}
                     <span class="link-carousel-body">
                         {{ with .Params.categories }}<span class="link-carousel-cat">{{ partial "category-label.html" (index . 0) }}</span>{{ end }}

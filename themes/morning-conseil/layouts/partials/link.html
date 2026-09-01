@@ -1,0 +1,26 @@
+{{- /* Resout un lien interne sensible a la langue (menus, footer, home, logo).
+
+       Deux pieges se cumulent quand le site est servi dans un sous-repertoire
+       (page de projet GitHub Pages, ex: /morning-conseil/) :
+
+       1. Le .URL d'une entree de menu contient DEJA le sous-chemin du baseURL,
+          donc le repasser dans relURL / relLangURL le duplique.
+       2. Ce meme .URL ne contient PAS le prefixe de langue : en EN il sort
+          /categories/office-rental/ au lieu de /en/categories/office-rental/.
+
+       On normalise donc le chemin (retrait du sous-chemin du baseURL) puis on
+       resout la page reelle pour prendre son RelPermalink, que Hugo calcule
+       toujours correctement (langue + sous-chemin). relLangURL ne sert plus que
+       de repli pour une URL qui ne correspond a aucune page.
+
+       Usage : {{ partial "link.html" .URL }} */ -}}
+{{- $u := . -}}
+{{- $base := (urls.Parse site.BaseURL).Path -}}
+{{- if and (ne $base "") (ne $base "/") (hasPrefix $u $base) -}}
+  {{- $u = printf "/%s" (strings.TrimPrefix $base $u) -}}
+{{- end -}}
+{{- with site.GetPage $u -}}
+{{- .RelPermalink -}}
+{{- else -}}
+{{- $u | strings.TrimPrefix "/" | relLangURL -}}
+{{- end -}}
