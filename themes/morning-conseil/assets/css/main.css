@@ -354,12 +354,15 @@ img { max-width: 100%; height: auto; display: block; }
     overflow: hidden;
 }
 
-/* Photo d'un espace Morning en fond, assombrie pour garder le texte lisible */
+/* Photo d'un espace Morning en fond, assombrie pour garder le texte lisible.
+   Chemin relatif a la feuille de style (servie depuis /css/) et pas absolu :
+   un chemin absolu ignore le sous-repertoire du baseURL et part en 404 quand
+   le site est servi sur une page de projet GitHub Pages. */
 .hero::before {
     content: '';
     position: absolute;
     inset: 0;
-    background-image: url('/images/hero/home-coworking-morning.webp');
+    background-image: url('../images/hero/home-coworking-morning.webp');
     background-size: cover;
     background-position: center 60%;
     z-index: 0;
