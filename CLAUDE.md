@@ -100,14 +100,14 @@ Fait :
 - Repo GitHub : `analytics-ds/morning-conseil` (public, comme tous les blogs du reseau)
 - GitHub Pages actif en mode `workflow`. URL de demo : https://analytics-ds.github.io/morning-conseil/
 - Logo officiel Morning en place dans le header (`static/images/morning-logo.svg`, version blanche de la navbar morning.fr)
+- Version anglaise complete : 6 articles dans `content/en/blog/`, apparies aux 6 articles FR par `translationKey`. Switcher de langue, hreflang, sitemaps, plan de site EN et pages auteur EN verifies sur les deux baseURL
+- `static/llms.txt` a jour (categories, 6 articles FR, 6 articles EN, auteurs)
 
 Reste a faire :
 
 - Faire creer le sous-domaine `conseil.morning.fr` par Morning (CNAME vers `analytics-ds.github.io`)
 - Une fois le DNS en place : renseigner le domaine personnalise dans Settings > Pages, ajouter `static/CNAME` avec `conseil.morning.fr`, puis activer « Enforce HTTPS »
 - Remplacer le favicon provisoire (`static/favicon.svg`, derive des couleurs du logo) par celui fourni par le client
-- Rediger les 6 articles en anglais (`content/en/blog/` ne contient que `_index.md`)
-- Mettre a jour `static/llms.txt` avec les URLs et titres reels
 
 ### Piege : URLs et sous-repertoire
 
@@ -132,6 +132,42 @@ hugo --quiet -d /tmp/mc-public
 ```
 
 puis controler qu'aucun `href` / `src` interne ne pointe vers un fichier absent.
+
+Les liens ecrits dans le markdown des articles passent par le render hook
+`layouts/_default/_markup/render-link.html`, qui les resout via `link.html`.
+Consequence pratique : **ecrire les liens internes sans prefixe de langue**
+(`/blog/mon-article/`). Hugo ajoute tout seul le `/en/` et le sous-chemin.
+Sans ce hook, chaque lien du corps part en 404 sur l'URL de demo.
+
+Attention, `--minify` supprime les guillemets d'attributs : un audit en regex
+`href="([^"]+)"` ne trouve rien sur le build. Passer par `html.parser`, ou
+accepter le guillemet optionnel (`href=["]?`).
+
+## Piege : les deux sitemaps se marchent dessus
+
+Avec `defaultContentLanguageInSubdir = false`, l'urlset de la langue par defaut
+et l'index multilingue visent tous les deux `/sitemap.xml`. Aucun renommage ne
+resout ca : `[languages.fr.sitemap] filename` est ignore, `[outputFormats.sitemap]
+basename` et `[outputFormats.sitemapindex] baseName` n'ont aucun effet sur le
+chemin emis, et `[sitemap] filename` s'applique aussi a l'index (la collision se
+deplace, l'index devient auto-referent).
+
+Solution en place : les deux templates sortent un **urlset**, jamais un index.
+`layouts/sitemapindex.xml` combine les deux langues, `layouts/sitemap.xml` fait
+une seule langue, et les deux appellent le partial `sitemap-urls.html`. Quel que
+soit le fichier qui gagne l'ecriture, `/sitemap.xml` reste valide et non vide.
+
+Ne pas non plus filtrer les pages sur un prefixe d'URL dans `sitemap.xml` :
+`.Data.Pages` est deja limite a la langue courante, et un test
+`hasPrefix .RelPermalink "/en/"` est toujours faux sur un deploiement en
+sous-repertoire (c'est ce qui vidait le sitemap EN).
+
+## Piege : `$.Title` dans une boucle de cartes
+
+Dans `list.html`, `home.html` et `authors/single.html`, `$` pointe sur la page de
+liste, pas sur l'article de la boucle. Un `alt="{{ $.Title }}"` donnait donc le
+meme alt a toutes les cartes (« Le Blog »). Capturer la valeur avant d'entrer
+dans le `with` : `{{ $alt := .Params.imageAlt | default .Title }}`.
 
 ## Regles generales
 
