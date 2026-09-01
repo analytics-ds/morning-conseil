@@ -1,0 +1,74 @@
+{{ define "main" }}
+{{ $isFR := eq .Site.Language.Lang "fr" }}
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content">
+        <span class="hero-badge">{{ if $isFR }}Guide des bureaux et du coworking{{ else }}Office and coworking guide{{ end }}</span>
+        <h1>{{ .Title }}</h1>
+        <p class="hero-description">{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}</p>
+        <a href="{{ "blog/" | relLangURL }}" class="btn-primary">{{ if $isFR }}Explorez le blog{{ else }}Explore the blog{{ end }}</a>
+    </div>
+</section>
+
+<!-- Categories Section -->
+<section class="categories-section">
+    <div class="container">
+        <h2 class="section-title">{{ if $isFR }}Nos thématiques{{ else }}Our topics{{ end }}</h2>
+        <div class="grid-categories">
+            {{/* On boucle sur le menu et pas sur .Site.Taxonomies : une thematique sans article
+                 encore publie doit rester affichee (sinon la home EN est vide au lancement). */}}
+            {{ range .Site.Menus.main }}
+            {{ if eq .Identifier "thematiques" }}
+            {{ range .Children }}
+            {{ $count := 0 }}
+            {{ with site.GetPage .URL }}{{ $count = len .Pages }}{{ end }}
+            <a href="{{ .URL | relLangURL }}" class="category-card">
+                {{/* Photo d'un espace Morning en fond. L'aplat de couleur reste
+                     par-dessus (::after en CSS) pour garder l'identite de la DA. */}}
+                {{ with .Params.image }}
+                <img src="{{ . | relURL }}" alt="" class="category-card-photo" loading="lazy" aria-hidden="true">
+                {{ end }}
+                <div class="category-card-overlay"></div>
+                <div class="category-card-content">
+                    <h3>{{ .Name }}</h3>
+                    <span class="category-count">{{ $count }} article{{ if gt $count 1 }}s{{ end }}</span>
+                </div>
+            </a>
+            {{ end }}
+            {{ end }}
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+<!-- Latest Articles Section -->
+<section class="latest-section">
+    <div class="container">
+        <h2 class="section-title">{{ if $isFR }}Derniers articles{{ else }}Latest articles{{ end }}</h2>
+        <div class="grid-articles">
+            {{ range first 6 (where .Site.RegularPages "Section" "blog") }}
+            <article class="article-card">
+                {{ with .Params.image }}
+                <div class="article-card-image">
+                    <img src="{{ . }}" alt="{{ $.Title }}" loading="lazy">
+                </div>
+                {{ end }}
+                <div class="article-card-body">
+                    <div class="article-meta">
+                        {{ with .Params.categories }}
+                        <span class="article-category">{{ partial "category-label.html" (index . 0) }}</span>
+                        {{ end }}
+                        <time>{{ time.Format "2 January 2006" .Date }}</time>
+                    </div>
+                    <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+                    <p>{{ .Description }}</p>
+                    <a href="{{ .RelPermalink }}" class="read-more">{{ if $isFR }}Lire la suite{{ else }}Read more{{ end }}</a>
+                </div>
+            </article>
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+{{ end }}

@@ -1,0 +1,121 @@
+# Auteurs de Morning Conseil — multilingue FR/EN
+# Lu nativement par Hugo via `.Site.Data.authors` (et `hugo.Data.authors`).
+#
+# L'ID (cle de la map) est utilise dans le frontmatter des articles : `author: camille-deshayes`
+# `topics` sert a la selection automatique de l'auteur, `expertise` alimente knowsAbout du schema Person.
+
+camille-deshayes:
+  id: camille-deshayes
+  name: Camille Deshayes
+  type: person
+  avatar: images/authors/camille-deshayes.jpg
+  linkedinUrl: ""
+  jobTitle:
+    fr: Rédactrice en chef, immobilier de bureau
+    en: Editor-in-chief, office real estate
+  role:
+    fr: Spécialiste location de bureaux et coworking
+    en: Office rental and coworking specialist
+  bio:
+    fr: "Camille Deshayes suit le marché du bureau parisien depuis dix ans, d'abord côté conseil en immobilier d'entreprise puis comme journaliste. Elle a visité plus de 300 espaces à Paris et en Île-de-France. Sur Morning Conseil, elle décortique les baux flexibles, les grilles tarifaires au poste et les vrais coûts d'une implantation, arrondissement par arrondissement."
+    en: "Camille Deshayes has followed the Paris office market for ten years, first in corporate real estate advisory and then as a journalist. She has visited more than 300 spaces in Paris and its region. On Morning Conseil, she breaks down flexible leases, price-per-desk grids and the real cost of setting up an office, district by district."
+  expertise:
+    - Location de bureaux
+    - Coworking
+    - Bail flexible et bail précaire
+    - Budget au poste
+    - Implantation à Paris
+    - Immobilier d'entreprise
+  topics:
+    - bureau
+    - bureaux
+    - location de bureaux
+    - coworking
+    - espace de travail
+    - bail
+    - loyer
+    - prix au poste
+    - budget
+    - domiciliation
+    - siege social
+    - quartier
+    - arrondissement
+    - paris
+
+antoine-riviere:
+  id: antoine-riviere
+  name: Antoine Rivière
+  type: person
+  avatar: images/authors/antoine-riviere.jpg
+  linkedinUrl: ""
+  jobTitle:
+    fr: Journaliste aménagement et space planning
+    en: Workspace design and space planning journalist
+  role:
+    fr: Spécialiste aménagement et salles de réunion
+    en: Workspace design and meeting room specialist
+  bio:
+    fr: "Architecte d'intérieur de formation, Antoine Rivière écrit sur l'aménagement des espaces de travail depuis huit ans. Il s'intéresse autant aux ratios de surface par personne qu'à l'acoustique, à la lumière et au mobilier. Sur Morning Conseil, il traduit les règles du space planning en repères concrets pour dimensionner et équiper ses bureaux et ses salles de réunion."
+    en: "Trained as an interior designer, Antoine Rivière has been writing about workspace design for eight years. He is as interested in floor area per person as in acoustics, lighting and furniture. On Morning Conseil, he turns space planning rules into practical benchmarks for sizing and equipping offices and meeting rooms."
+  expertise:
+    - Space planning
+    - Aménagement de bureaux
+    - Salles de réunion
+    - Acoustique et lumière
+    - Mobilier de bureau
+    - Ergonomie au travail
+  topics:
+    - amenagement
+    - space planning
+    - salle de reunion
+    - mobilier
+    - acoustique
+    - lumiere
+    - ergonomie
+    - open space
+    - bureau ferme
+    - visio
+    - phone box
+    - surface
+    - m2
+    - decoration
+    - agencement
+
+helene-morvan:
+  id: helene-morvan
+  name: Hélène Morvan
+  type: person
+  avatar: images/authors/helene-morvan.jpg
+  linkedinUrl: ""
+  jobTitle:
+    fr: Cheffe de projet événementiel d'entreprise
+    en: Corporate events project manager
+  role:
+    fr: Spécialiste événements d'entreprise et organisation du travail
+    en: Corporate events and ways of working specialist
+  bio:
+    fr: "Hélène Morvan a organisé une centaine de séminaires, conventions et soirées d'entreprise avant de passer à l'écriture. Elle connaît les contraintes techniques d'un lieu privatisé comme les points de bascule d'un budget. Sur Morning Conseil, elle couvre l'organisation d'événements et les méthodes d'organisation du travail : rituels d'équipe, concentration et rythme de la semaine."
+    en: "Hélène Morvan organised around a hundred offsites, conventions and company parties before turning to writing. She knows the technical constraints of a private venue as well as the tipping points of a budget. On Morning Conseil, she covers event planning and ways of working: team rituals, focus and weekly rhythm."
+  expertise:
+    - Organisation d'événement
+    - Privatisation de lieu
+    - Séminaire et convention
+    - Productivité au travail
+    - Rituels d'équipe
+    - Flex office et télétravail
+  topics:
+    - evenement
+    - evenementiel
+    - seminaire
+    - convention
+    - privatisation
+    - soiree entreprise
+    - team building
+    - productivite
+    - organisation
+    - concentration
+    - flex office
+    - teletravail
+    - reunion
+    - qvt
+    - culture d equipe

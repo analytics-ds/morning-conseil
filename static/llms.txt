@@ -1,0 +1,40 @@
+# Morning Conseil
+
+> Le guide pour choisir, amenager et faire vivre ses bureaux : coworking, location, quartiers et vie de bureau.
+
+## A propos
+
+Morning Conseil est le media editorial de Morning, operateur francais de bureaux et d'espaces de coworking. Les articles sont rediges par des experts identifies (schema.org/Person), bases sur des donnees de marche sourcees et mis a jour regulierement.
+
+## Thematiques couvertes (FR)
+
+- Coworking : https://conseil.morning.fr/categories/coworking/
+- Location de bureaux : https://conseil.morning.fr/categories/location-de-bureaux/
+- Amenagement : https://conseil.morning.fr/categories/amenagement/
+- Evenementiel : https://conseil.morning.fr/categories/evenementiel/
+- Quartiers et implantation : https://conseil.morning.fr/categories/quartiers-et-implantation/
+- Vie de bureau : https://conseil.morning.fr/categories/vie-de-bureau/
+
+## Articles de reference (FR)
+
+- Blog FR : https://conseil.morning.fr/blog/
+- [a completer a chaque nouvel article]
+
+## Version anglaise (EN)
+
+- Homepage EN : https://conseil.morning.fr/en/
+- Blog EN : https://conseil.morning.fr/en/blog/
+- [a completer a chaque nouvel article]
+
+## Informations techniques
+
+- Generateur : Hugo (site statique)
+- Multilingue : francais (defaut) + anglais dans /en/
+- Sitemap : https://conseil.morning.fr/sitemap.xml
+- RSS : https://conseil.morning.fr/index.xml
+- Schema.org : Organization, Article, BreadcrumbList, FAQPage, WebSite, CollectionPage, Person
+
+## Contact
+
+- URL : https://conseil.morning.fr/
+- Site principal : https://www.morning.fr/

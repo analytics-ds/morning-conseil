@@ -1,0 +1,36 @@
+{{ define "main" }}
+{{ $isFR := eq .Site.Language.Lang "fr" }}
+{{ $lang := .Site.Language.Lang }}
+
+<section class="list-header">
+    <div class="container">
+        <h1>{{ .Title }}</h1>
+        {{ with .Description }}<p class="list-description">{{ . }}</p>{{ end }}
+    </div>
+</section>
+
+<section class="authors-list-section">
+    <div class="container">
+        <div class="grid-authors">
+            {{ range .Pages }}
+            {{ $slug := .Slug | default (path.Base .RelPermalink) }}
+            {{ $author := index $.Site.Data.authors $slug }}
+            <a href="{{ .RelPermalink }}" class="author-card">
+                {{ with $author }}
+                {{ with .avatar }}
+                <img src="{{ . | relURL }}" alt="{{ $author.name }}" class="author-card-avatar" width="96" height="96" loading="lazy">
+                {{ end }}
+                <div class="author-card-body">
+                    <h2>{{ .name }}</h2>
+                    {{ with index .role $lang }}<span class="author-card-role">{{ . }}</span>{{ end }}
+                    {{ with index .bio $lang }}<p>{{ . | truncate 180 }}</p>{{ end }}
+                </div>
+                {{ end }}
+                <span class="read-more">{{ if $isFR }}Voir ses articles{{ else }}See their articles{{ end }}</span>
+            </a>
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+{{ end }}

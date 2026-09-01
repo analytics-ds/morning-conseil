@@ -1,0 +1,4 @@
+{{- /* Recoit le nom brut d'une categorie, renvoie le titre de la page de terme si elle existe.
+       Permet d'avoir un slug propre (ex: organisation-evenement) et un libelle correct
+       (ex: Organisation d'evenement) via content/categories/<slug>/_index.md */ -}}
+{{- with site.GetPage (printf "categories/%s" (. | urlize)) -}}{{ .Title }}{{- else -}}{{ . }}{{- end -}}

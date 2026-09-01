@@ -1,0 +1,203 @@
+baseURL = 'https://conseil.morning.fr/'
+title = 'Morning Conseil'
+theme = 'morning-conseil'
+defaultContentLanguage = 'fr'
+defaultContentLanguageInSubdir = false
+
+[taxonomies]
+  category = 'categories'
+  tag = 'tags'
+
+[languages]
+  [languages.fr]
+    languageCode = 'fr'
+    languageName = 'Francais'
+    weight = 1
+    [languages.fr.params]
+      description = "Le guide pour choisir, amenager et faire vivre ses bureaux : location, coworking, salles de reunion, evenements et productivite"
+  [languages.en]
+    languageCode = 'en'
+    languageName = 'English'
+    weight = 2
+    contentDir = 'content/en'
+    [languages.en.params]
+      description = "The guide to choosing, designing and running your offices: rental, coworking, meeting rooms, events and productivity"
+
+[[menus.main]]
+  name = 'Accueil'
+  url = '/'
+  weight = 1
+
+[[menus.main]]
+  name = 'Thématiques'
+  url = '#'
+  weight = 2
+  identifier = 'thematiques'
+
+[[menus.main]]
+  name = 'Le Blog'
+  url = '/blog/'
+  weight = 3
+
+# Sous-menu Thematiques
+[[menus.main]]
+  name = 'Location de bureaux'
+  url = '/categories/location-de-bureaux/'
+  parent = 'thematiques'
+  weight = 1
+  [menus.main.params]
+    description = 'Bureau prive, bail flexible, budget au poste'
+    icon = 'building'
+    image = '/images/blog/bureau-privatif-morning.webp'
+
+[[menus.main]]
+  name = 'Coworking'
+  url = '/categories/coworking/'
+  parent = 'thematiques'
+  weight = 2
+  [menus.main.params]
+    description = 'Choisir son espace, tarifs et formules d abonnement'
+    icon = 'users'
+    image = '/images/blog/coworking-espace-morning.webp'
+
+[[menus.main]]
+  name = 'Salle de reunion'
+  url = '/categories/salle-de-reunion/'
+  parent = 'thematiques'
+  weight = 3
+  [menus.main.params]
+    description = 'Reserver, equiper et dimensionner ses salles'
+    icon = 'screen'
+    image = '/images/blog/salle-reunion-morning.webp'
+
+[[menus.main]]
+  name = "Organisation d'evenement"
+  url = '/categories/organisation-evenement/'
+  parent = 'thematiques'
+  weight = 4
+  [menus.main.params]
+    description = 'Privatiser un lieu pour un seminaire ou une soiree'
+    icon = 'calendar'
+    image = '/images/blog/evenementiel-morning.webp'
+
+[[menus.main]]
+  name = 'Amenagement'
+  url = '/categories/amenagement/'
+  parent = 'thematiques'
+  weight = 5
+  [menus.main.params]
+    description = 'Space planning, mobilier, acoustique et lumiere'
+    icon = 'layout'
+    image = '/images/blog/design-espace-travail-morning.webp'
+
+[[menus.main]]
+  name = 'Productivite'
+  url = '/categories/productivite/'
+  parent = 'thematiques'
+  weight = 6
+  [menus.main.params]
+    description = 'Concentration, organisation et rythme de travail'
+    icon = 'clock'
+    image = '/images/blog/bureaux-morning-flex-office.webp'
+
+# Menu anglais
+[[languages.en.menus.main]]
+  name = 'Home'
+  url = '/'
+  weight = 1
+
+[[languages.en.menus.main]]
+  name = 'Topics'
+  url = '#'
+  weight = 2
+  identifier = 'thematiques'
+
+[[languages.en.menus.main]]
+  name = 'The Blog'
+  url = '/blog/'
+  weight = 3
+
+[[languages.en.menus.main]]
+  name = 'Office rental'
+  url = '/categories/office-rental/'
+  parent = 'thematiques'
+  weight = 1
+  [languages.en.menus.main.params]
+    description = 'Private offices, flexible leases, cost per desk'
+    icon = 'building'
+    image = '/images/blog/bureau-privatif-morning.webp'
+
+[[languages.en.menus.main]]
+  name = 'Coworking'
+  url = '/categories/coworking/'
+  parent = 'thematiques'
+  weight = 2
+  [languages.en.menus.main.params]
+    description = 'Choosing a space, pricing and membership plans'
+    icon = 'users'
+    image = '/images/blog/coworking-espace-morning.webp'
+
+[[languages.en.menus.main]]
+  name = 'Meeting rooms'
+  url = '/categories/meeting-rooms/'
+  parent = 'thematiques'
+  weight = 3
+  [languages.en.menus.main.params]
+    description = 'Booking, equipping and sizing your meeting rooms'
+    icon = 'screen'
+    image = '/images/blog/salle-reunion-morning.webp'
+
+[[languages.en.menus.main]]
+  name = 'Event planning'
+  url = '/categories/event-planning/'
+  parent = 'thematiques'
+  weight = 4
+  [languages.en.menus.main.params]
+    description = 'Booking a venue for an offsite or a party'
+    icon = 'calendar'
+    image = '/images/blog/evenementiel-morning.webp'
+
+[[languages.en.menus.main]]
+  name = 'Workspace design'
+  url = '/categories/workspace-design/'
+  parent = 'thematiques'
+  weight = 5
+  [languages.en.menus.main.params]
+    description = 'Space planning, furniture, acoustics and lighting'
+    icon = 'layout'
+    image = '/images/blog/design-espace-travail-morning.webp'
+
+[[languages.en.menus.main]]
+  name = 'Productivity'
+  url = '/categories/productivity/'
+  parent = 'thematiques'
+  weight = 6
+  [languages.en.menus.main.params]
+    description = 'Focus, organisation and work rhythm'
+    icon = 'clock'
+    image = '/images/blog/bureaux-morning-flex-office.webp'
+
+[params]
+  description = "Le guide pour choisir, amenager et faire vivre ses bureaux : location, coworking, salles de reunion, evenements et productivite"
+  author_name = "La redaction Morning Conseil"
+  author_url = "https://conseil.morning.fr/"
+  author_job_title = "Redaction bureaux et coworking"
+  theme_name = "morning-conseil"
+
+[sitemap]
+  changefreq = 'weekly'
+  priority = 0.5
+  filename = 'sitemap.xml'
+
+[markup]
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 2
+    ordered = true
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+# Desactiver la minification XML pour avoir un sitemap lisible
+[minify]
+  disableXML = true

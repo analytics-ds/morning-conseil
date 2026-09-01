@@ -1,0 +1,30 @@
+{{- /* Citation de l'expert redacteur.
+       Usage sans parametre : l'auteur de l'article est repris automatiquement.
+       {{< citation >}}Le texte de la citation.{{< /citation >}}
+
+       Pour citer quelqu'un d'autre :
+       {{< citation auteur="Prenom Nom" role="Fonction" >}}...{{< /citation >}} */ -}}
+{{- $lang := .Page.Site.Language.Lang -}}
+{{- $author := index .Page.Site.Data.authors (.Page.Params.author | default "") -}}
+{{- $name := .Get "auteur" -}}
+{{- $role := .Get "role" -}}
+{{- $avatar := "" -}}
+{{- $url := "" -}}
+{{- if and (not $name) $author -}}
+    {{- $name = $author.name -}}
+    {{- $role = index $author.role $lang -}}
+    {{- $avatar = $author.avatar -}}
+    {{- $url = printf "authors/%s/" $author.id | relLangURL -}}
+{{- end -}}
+<figure class="expert-quote">
+    <blockquote>{{ .Inner | markdownify }}</blockquote>
+    {{- with $name }}
+    <figcaption class="expert-quote-author">
+        {{ with $avatar }}<img src="{{ . | relURL }}" alt="" class="expert-quote-avatar" width="44" height="44" loading="lazy">{{ end }}
+        <span class="expert-quote-meta">
+            <span class="expert-quote-name">{{ if $url }}<a href="{{ $url }}">{{ $name }}</a>{{ else }}{{ $name }}{{ end }}</span>
+            {{ with $role }}<span class="expert-quote-role">{{ . }}</span>{{ end }}
+        </span>
+    </figcaption>
+    {{- end }}
+</figure>

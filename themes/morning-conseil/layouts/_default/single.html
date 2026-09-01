@@ -1,0 +1,177 @@
+{{ define "main" }}
+{{ $isFR := eq .Site.Language.Lang "fr" }}
+{{ $lang := .Site.Language.Lang }}
+{{ $author := index .Site.Data.authors (.Params.author | default "") }}
+
+<article class="single-article">
+    <header class="article-header{{ with .Params.image }} has-banner{{ end }}"{{ with .Params.image }} style="background-image: url('{{ . }}')"{{ end }}>
+        <div class="article-header-overlay"></div>
+        <div class="container article-header-content">
+            <div class="article-meta">
+                {{ with .Params.categories }}
+                <a href="{{ "categories/" | relLangURL }}{{ index . 0 | urlize }}/" class="article-category">{{ partial "category-label.html" (index . 0) }}</a>
+                {{ end }}
+                <time datetime="{{ .Date.Format "2006-01-02" }}">{{ time.Format "2 January 2006" .Date }}</time>
+                {{ if .Params.readingTime }}
+                <span class="reading-time">{{ .ReadingTime }} min{{ if $isFR }} de lecture{{ end }}</span>
+                {{ end }}
+            </div>
+            <h1>{{ .Title }}</h1>
+            {{ with .Description }}
+            <p class="article-description">{{ . }}</p>
+            {{ end }}
+            {{ with $author }}
+            <div class="article-author">
+                {{ with .avatar }}<img src="{{ . | relURL }}" alt="{{ $author.name }}" class="article-author-avatar" width="40" height="40" loading="lazy">{{ end }}
+                <span class="author-label">{{ if $isFR }}Par{{ else }}By{{ end }}</span>
+                <a href="{{ (printf "authors/%s/" $author.id) | relLangURL }}" class="author-name">{{ .name }}</a>
+            </div>
+            {{ end }}
+            <div class="article-tags">
+                {{ range .Params.tags }}
+                <a href="{{ "tags/" | relLangURL }}{{ . | urlize }}/" class="tag">#{{ . }}</a>
+                {{ end }}
+            </div>
+        </div>
+    </header>
+
+    <div class="article-content">
+        <div class="container">
+            {{/* Grille 2 colonnes : sommaire sticky a gauche, corps de l'article a droite.
+                 Repli en une seule colonne sous 992px, le sommaire passe alors au-dessus. */}}
+            <div class="article-layout{{ if not (and .Params.toc (ne .TableOfContents "")) }} article-layout--no-toc{{ end }}">
+
+                {{/* --- Sommaire : genere par Hugo depuis les H2/H3 du contenu --- */}}
+                {{ if and .Params.toc (ne .TableOfContents "") }}
+                <aside class="article-toc" aria-label="{{ if $isFR }}Sommaire{{ else }}Table of contents{{ end }}">
+                    <div class="article-toc-inner">
+                        <p class="article-toc-label">{{ if $isFR }}Sommaire{{ else }}Contents{{ end }}</p>
+                        {{ .TableOfContents }}
+                    </div>
+                </aside>
+                {{ end }}
+
+                <div class="article-body">
+
+                    {{/* --- En bref : synthese en tete d'article, alimentee par le frontmatter enBref --- */}}
+                    {{ with .Params.enBref }}
+                    <aside class="in-brief">
+                        <span class="in-brief-label">{{ if $isFR }}En bref{{ else }}In brief{{ end }}</span>
+                        <ul>
+                            {{ range . }}<li>{{ . | markdownify }}</li>{{ end }}
+                        </ul>
+                    </aside>
+                    {{ end }}
+
+                    {{ .Content }}
+
+                    {{/* --- FAQ : alimentee par le frontmatter faq (q / a).
+                         Le JSON-LD FAQPage correspondant est emis par seo-head.html. --- */}}
+                    {{ with .Params.faq }}
+                    <section class="article-faq">
+                        <h2>{{ if $isFR }}Questions fréquentes{{ else }}Frequently asked questions{{ end }}</h2>
+                        {{ range . }}
+                        <details class="faq-item">
+                            <summary>{{ .q }}</summary>
+                            <div class="faq-answer">{{ .a | markdownify }}</div>
+                        </details>
+                        {{ end }}
+                    </section>
+                    {{ end }}
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{ with $author }}
+    <aside class="author-box">
+        <div class="container container-narrow">
+            <div class="author-box-inner">
+                {{ with .avatar }}<img src="{{ . | relURL }}" alt="{{ $author.name }}" class="author-box-avatar" width="88" height="88" loading="lazy">{{ end }}
+                <div class="author-box-content">
+                    <span class="author-box-label">{{ if $isFR }}Ecrit par{{ else }}Written by{{ end }}</span>
+                    <h2><a href="{{ (printf "authors/%s/" .id) | relLangURL }}">{{ .name }}</a></h2>
+                    {{ with index .role $lang }}<span class="author-box-role">{{ . }}</span>{{ end }}
+                    {{ with index .bio $lang }}<p>{{ . }}</p>{{ end }}
+                    {{ with .expertise }}
+                    <div class="author-hero-expertise">
+                        {{ range first 4 . }}<span class="author-tag">{{ . }}</span>{{ end }}
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+    </aside>
+    {{ end }}
+
+    {{/* --- Carrousel de maillage : derniers articles publies, hors article courant --- */}}
+    {{ $others := where (where .Site.RegularPages "Section" "blog") "Permalink" "!=" .Permalink }}
+    {{ with first 8 $others.ByDate.Reverse }}
+    <section class="link-carousel">
+        <div class="container">
+            <div class="link-carousel-head">
+                <h2>{{ if $isFR }}Derniers articles publies{{ else }}Latest articles{{ end }}</h2>
+                <div class="link-carousel-controls">
+                    <button type="button" class="carousel-btn" data-carousel-prev aria-label="{{ if $isFR }}Precedent{{ else }}Previous{{ end }}">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <button type="button" class="carousel-btn" data-carousel-next aria-label="{{ if $isFR }}Suivant{{ else }}Next{{ end }}">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                </div>
+            </div>
+            <div class="link-carousel-track" data-carousel-track>
+                {{ range . }}
+                <a href="{{ .RelPermalink }}" class="link-carousel-card">
+                    {{ with .Params.image }}
+                    <span class="link-carousel-media"><img src="{{ . | relURL }}" alt="" loading="lazy"></span>
+                    {{ end }}
+                    <span class="link-carousel-body">
+                        {{ with .Params.categories }}<span class="link-carousel-cat">{{ partial "category-label.html" (index . 0) }}</span>{{ end }}
+                        <span class="link-carousel-title">{{ .Title }}</span>
+                    </span>
+                </a>
+                {{ end }}
+            </div>
+        </div>
+    </section>
+    {{ end }}
+
+    <footer class="article-footer">
+        <div class="container container-narrow">
+            <nav class="article-nav">
+                {{ with .PrevInSection }}
+                <a href="{{ .RelPermalink }}" class="nav-prev">
+                    <span class="nav-label">{{ if $isFR }}Article precedent{{ else }}Previous article{{ end }}</span>
+                    <span class="nav-title">{{ .Title }}</span>
+                </a>
+                {{ end }}
+                {{ with .NextInSection }}
+                <a href="{{ .RelPermalink }}" class="nav-next">
+                    <span class="nav-label">{{ if $isFR }}Article suivant{{ else }}Next article{{ end }}</span>
+                    <span class="nav-title">{{ .Title }}</span>
+                </a>
+                {{ end }}
+            </nav>
+        </div>
+    </footer>
+</article>
+
+<script>
+// Carrousel de maillage : defilement par pas d'une carte
+(function () {
+    var track = document.querySelector('[data-carousel-track]');
+    if (!track) return;
+    var step = function () {
+        var card = track.querySelector('.link-carousel-card');
+        return card ? card.offsetWidth + 20 : 300;
+    };
+    var prev = document.querySelector('[data-carousel-prev]');
+    var next = document.querySelector('[data-carousel-next]');
+    if (prev) prev.addEventListener('click', function () { track.scrollBy({ left: -step(), behavior: 'smooth' }); });
+    if (next) next.addEventListener('click', function () { track.scrollBy({ left: step(), behavior: 'smooth' }); });
+})();
+</script>
+
+{{ end }}

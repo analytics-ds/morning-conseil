@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "morning-conseil",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "8802", "--directory", "/tmp/mc-public"],
+      "port": 8802
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{{ $isFR := eq .Site.Language.Lang "fr" }}
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>{{ .Site.Title }}</h4>
+                <p>{{ .Site.Params.description }}</p>
+            </div>
+            <div class="footer-col">
+                <h4>{{ if $isFR }}Thématiques{{ else }}Topics{{ end }}</h4>
+                <ul>
+                    {{/* On lit le menu et pas .Site.Taxonomies : une categorie sans article
+                         encore publie doit rester listee (cas de la version EN au lancement). */}}
+                    {{ range .Site.Menus.main }}
+                    {{ if eq .Identifier "thematiques" }}
+                    {{ range .Children }}
+                    <li><a href="{{ .URL | relLangURL }}">{{ .Name }}</a></li>
+                    {{ end }}
+                    {{ end }}
+                    {{ end }}
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <ul>
+                    {{ range .Site.Menus.main }}
+                    {{ if and (not .Parent) (ne .URL "#") }}
+                    <li><a href="{{ .URL | relLangURL }}">{{ .Name }}</a></li>
+                    {{ end }}
+                    {{ end }}
+                    <li><a href="{{ if $isFR }}{{ "plan-du-site/" | relLangURL }}{{ else }}{{ "site-map/" | relLangURL }}{{ end }}">{{ if $isFR }}Plan du site{{ else }}Site map{{ end }}</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; {{ now.Year }} {{ .Site.Title }}{{ if $isFR }}. Tous droits reserves.{{ else }}. All rights reserved.{{ end }}</p>
+        </div>
+    </div>
+</footer>

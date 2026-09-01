@@ -1,0 +1,37 @@
+# Roadmap editoriale evergreen — Morning Conseil (morning-conseil)
+#
+# Blog : https://conseil.morning.fr/
+# Langue principale : fr (+ EN auto dans /en/)
+# Categories disponibles (doivent matcher hugo.toml) :
+#   - Coworking
+#   - Location de bureaux
+#   - Amenagement
+#   - Evenementiel
+#   - Quartiers et implantation
+#   - Vie de bureau
+#
+# FONCTIONNEMENT
+# --------------
+# L'agent prend la premiere entree avec status: todo et scheduled_date <= today.
+# Il genere l'article FR + EN et push sur main. GitHub Actions deploie.
+# En cas d'echec, status passe a failed et error est rempli (voir notes dans
+# .claude/templates/roadmap-template.yaml).
+#
+# AJOUT D'UNE ENTREE
+# ------------------
+# Copier un bloc, remplir kw / category / scheduled_date, laisser les autres
+# champs tels quels. Respecter l'orthographe exacte d'une categorie ci-dessus.
+#
+# Frequence cible sur ce blog : 4 articles/semaine maximum (regle du reseau).
+
+articles:
+  # A remplir par Manon (mots-cles evergreen bureaux / coworking / amenagement)
+  # Exemple de format :
+  # - kw: "prix coworking paris"
+  #   category: "Coworking"
+  #   scheduled_date: "2026-09-01"
+  #   status: todo
+  #   published_date: null
+  #   published_url_fr: null
+  #   published_url_en: null
+  #   error: null

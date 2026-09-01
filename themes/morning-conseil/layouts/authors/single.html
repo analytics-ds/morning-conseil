@@ -1,0 +1,63 @@
+{{ define "main" }}
+{{ $isFR := eq .Site.Language.Lang "fr" }}
+{{ $lang := .Site.Language.Lang }}
+{{ $slug := .Slug | default (path.Base .RelPermalink) }}
+{{ $author := index .Site.Data.authors $slug }}
+
+<section class="author-hero">
+    <div class="container">
+        <div class="author-hero-inner">
+            {{ with $author }}
+            {{ with .avatar }}
+            <img src="{{ . | relURL }}" alt="{{ $author.name }}" class="author-hero-avatar" width="128" height="128" loading="eager">
+            {{ end }}
+            <div class="author-hero-content">
+                <span class="author-hero-label">{{ if $isFR }}Auteur{{ else }}Author{{ end }}</span>
+                <h1>{{ .name }}</h1>
+                {{ with index .role $lang }}<p class="author-hero-role">{{ . }}</p>{{ end }}
+                {{ with index .bio $lang }}<p class="author-hero-bio">{{ . }}</p>{{ end }}
+                {{ with .expertise }}
+                <div class="author-hero-expertise">
+                    {{ range . }}<span class="author-tag">{{ . }}</span>{{ end }}
+                </div>
+                {{ end }}
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+<section class="author-articles">
+    <div class="container">
+        <h2 class="section-title">{{ if $isFR }}Articles de{{ else }}Articles by{{ end }} {{ with $author }}{{ .name }}{{ end }}</h2>
+        {{ $articles := where (where .Site.RegularPages "Section" "blog") "Params.author" $slug }}
+        {{ if $articles }}
+        <div class="grid-articles">
+            {{ range $articles.ByDate.Reverse }}
+            <article class="article-card">
+                {{ with .Params.image }}
+                <div class="article-card-image">
+                    <img src="{{ . }}" alt="{{ $.Title }}" loading="lazy">
+                </div>
+                {{ end }}
+                <div class="article-card-body">
+                    <div class="article-meta">
+                        {{ with .Params.categories }}
+                        <span class="article-category">{{ partial "category-label.html" (index . 0) }}</span>
+                        {{ end }}
+                        <time>{{ time.Format "2 January 2006" .Date }}</time>
+                    </div>
+                    <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+                    <p>{{ .Description }}</p>
+                    <a href="{{ .RelPermalink }}" class="read-more">{{ if $isFR }}Lire la suite{{ else }}Read more{{ end }}</a>
+                </div>
+            </article>
+            {{ end }}
+        </div>
+        {{ else }}
+        <p class="author-no-article">{{ if $isFR }}Aucun article publié pour le moment.{{ else }}No article published yet.{{ end }}</p>
+        {{ end }}
+    </div>
+</section>
+
+{{ end }}

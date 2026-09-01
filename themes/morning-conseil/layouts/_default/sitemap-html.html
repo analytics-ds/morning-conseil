@@ -1,0 +1,114 @@
+{{ define "main" }}
+{{ $currentLang := .Lang | default "fr" }}
+{{ $isEN := eq $currentLang "en" }}
+
+<section class="plan-site-page">
+  <div class="container">
+    <header class="plan-site-header">
+      <h1>{{ .Title }}</h1>
+      {{ with .Description }}<p class="plan-site-desc">{{ . }}</p>{{ end }}
+    </header>
+
+    <div class="plan-site-grid">
+
+      {{/* --- Pages principales --- */}}
+      <div class="plan-site-col">
+        <h2 class="plan-site-title">{{ if $isEN }}Main pages{{ else }}Pages principales{{ end }}</h2>
+        <ul class="plan-site-list">
+          <li><a href="{{ "/" | relLangURL }}">{{ if $isEN }}Home{{ else }}Accueil{{ end }}</a></li>
+          {{ $legalSlugs := slice "mentions-legales" "politique-de-confidentialite" "legal-notice" "privacy-policy" "cgu" "cookies" }}
+          {{ range (where (where .Site.RegularPages "Kind" "page") "Section" "") }}
+            {{ $slug := path.Base (strings.TrimSuffix "/" .RelPermalink) }}
+            {{ if in $legalSlugs $slug }}{{ continue }}{{ end }}
+            {{ if eq $slug (cond $isEN "site-map" "plan-du-site") }}{{ continue }}{{ end }}
+            <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+          {{ end }}
+        </ul>
+      </div>
+
+      {{/* --- Blog --- */}}
+      {{ $blogPages := where (where .Site.RegularPages "Section" "blog") "Kind" "page" }}
+      {{ if $blogPages }}
+      <div class="plan-site-col">
+        <h2 class="plan-site-title">Blog</h2>
+        <ul class="plan-site-list">
+          <li><a href="{{ "blog/" | relLangURL }}"><strong>{{ if $isEN }}All articles{{ else }}Tous les articles{{ end }}</strong></a></li>
+          {{ range $blogPages.ByDate.Reverse }}
+            <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+          {{ end }}
+        </ul>
+      </div>
+      {{ end }}
+
+      {{/* --- Categories --- */}}
+      {{ $localCats := slice }}
+      {{ range (where .Site.Pages "Section" "categories") }}
+        {{ if eq .Kind "term" }}
+          {{/* $p et pas $ : dans un range, $ pointe la page du plan de site, pas le terme */}}
+          {{ $p := . }}
+          {{ $isEnPage := hasPrefix $p.RelPermalink "/en/" }}
+          {{ if or (and $isEN $isEnPage) (and (not $isEN) (not $isEnPage)) }}
+            {{ $localCats = $localCats | append $p }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+      {{ if $localCats }}
+      <div class="plan-site-col">
+        <h2 class="plan-site-title">{{ if $isEN }}Categories{{ else }}Catégories{{ end }}</h2>
+        <ul class="plan-site-list">
+          {{ range $localCats }}
+          {{ $count := 0 }}
+          {{ range .Pages }}{{ if eq .Kind "page" }}{{ $count = add $count 1 }}{{ end }}{{ end }}
+          <li><a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ if gt $count 0 }} <span class="plan-count">({{ $count }})</span>{{ end }}</li>
+          {{ end }}
+        </ul>
+      </div>
+      {{ end }}
+
+      {{/* --- Authors --- */}}
+      {{ $auths := slice }}
+      {{/* Les auteurs ne sont pas une taxonomie mais des branch bundles :
+           chaque fiche est un Kind "section", la racine /authors/ est exclue. */}}
+      {{ range (where .Site.Pages "Section" "authors") }}
+        {{ if and (eq .Kind "section") (ne .RelPermalink (relLangURL "authors/")) }}
+          {{ $p := . }}
+          {{ $isEnPage := hasPrefix $p.RelPermalink "/en/" }}
+          {{ if or (and $isEN $isEnPage) (and (not $isEN) (not $isEnPage)) }}
+            {{ $auths = $auths | append $p }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+      {{ if $auths }}
+      <div class="plan-site-col">
+        <h2 class="plan-site-title">{{ if $isEN }}Authors{{ else }}Auteurs{{ end }}</h2>
+        <ul class="plan-site-list">
+          <li><a href="{{ "authors/" | relLangURL }}"><strong>{{ if $isEN }}All authors{{ else }}Tous les auteurs{{ end }}</strong></a></li>
+          {{ range $auths }}
+            <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+          {{ end }}
+        </ul>
+      </div>
+      {{ end }}
+
+      {{/* --- Legal --- */}}
+      {{ $legalPages := slice }}
+      {{ $legalSlugsAll := slice "mentions-legales" "politique-de-confidentialite" "legal-notice" "privacy-policy" "cgu" "cookies" }}
+      {{ range (where (where .Site.RegularPages "Kind" "page") "Section" "") }}
+        {{ $slug := path.Base (strings.TrimSuffix "/" .RelPermalink) }}
+        {{ if in $legalSlugsAll $slug }}{{ $legalPages = $legalPages | append . }}{{ end }}
+      {{ end }}
+      {{ if $legalPages }}
+      <div class="plan-site-col">
+        <h2 class="plan-site-title">{{ if $isEN }}Legal{{ else }}Pages légales{{ end }}</h2>
+        <ul class="plan-site-list">
+          {{ range $legalPages }}
+            <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+          {{ end }}
+        </ul>
+      </div>
+      {{ end }}
+
+    </div>
+  </div>
+</section>
+{{ end }}

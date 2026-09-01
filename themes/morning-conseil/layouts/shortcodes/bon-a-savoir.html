@@ -1,0 +1,13 @@
+{{- /* Encart "Bon a savoir".
+       Usage :
+       {{< bon-a-savoir >}}
+       Le texte de l'encart, en markdown.
+       {{< /bon-a-savoir >}}
+
+       Titre personnalisable : {{< bon-a-savoir titre="A retenir" >}} */ -}}
+{{- $isFR := eq .Page.Site.Language.Lang "fr" -}}
+{{- $default := cond $isFR "Bon à savoir" "Good to know" -}}
+<aside class="callout callout--tip">
+    <span class="callout-label">{{ .Get "titre" | default ($.Get "title") | default $default }}</span>
+    <div class="callout-body">{{ .Inner | markdownify }}</div>
+</aside>

@@ -1,0 +1,74 @@
+# Morning Conseil
+# https://conseil.morning.fr
+# robots.txt - Derniere mise a jour : 2026-08-27
+
+# ==============================
+# Tous les robots
+# ==============================
+User-agent: *
+Allow: /
+Disallow:
+
+Allow: /blog/
+Allow: /categories/
+Allow: /plan-du-site/
+Allow: /assets/
+
+# ==============================
+# Googlebot
+# ==============================
+User-agent: Googlebot
+Allow: /
+
+# ==============================
+# Bingbot
+# ==============================
+User-agent: Bingbot
+Allow: /
+
+# ==============================
+# Agents IA / LLMs (GEO)
+# ==============================
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# ==============================
+# Sitemap
+# ==============================
+Sitemap: https://conseil.morning.fr/sitemap.xml
+# Le sitemap principal (index) reference /fr/sitemap.xml et /en/sitemap.xml
+
+# ==============================
+# llms.txt pour les LLMs
+# ==============================
+# https://conseil.morning.fr/llms.txt
