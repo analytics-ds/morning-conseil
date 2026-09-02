@@ -66,7 +66,9 @@ Allow: /
 # Sitemap
 # ==============================
 Sitemap: https://conseil.morning.fr/sitemap.xml
-# Le sitemap principal (index) reference /fr/sitemap.xml et /en/sitemap.xml
+# /sitemap.xml contient les URLs des deux langues, /en/sitemap.xml celles de
+# l'anglais seul. Il n'y a pas de /fr/sitemap.xml : le francais est servi a la
+# racine et non dans un sous-repertoire.
 
 # ==============================
 # llms.txt pour les LLMs

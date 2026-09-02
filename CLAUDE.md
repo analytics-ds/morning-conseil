@@ -243,13 +243,15 @@ Pages riches en photos d'espaces : `/bureaux-coworking`, `/bureaux-coworking/<no
 ### 1. Le sitemap XML (robots + bots)
 
 Hugo genere automatiquement les sitemaps via :
-- `layouts/sitemapindex.xml` -> `/sitemap.xml` (l index qui reference les sitemaps par langue)
-- `layouts/sitemap.xml` -> `/fr/sitemap.xml` + `/en/sitemap.xml` (urlsets par langue)
+- `layouts/sitemapindex.xml` -> `/sitemap.xml` (urlset combine FR + EN, voir le piege plus haut)
+- `layouts/sitemap.xml` -> `/en/sitemap.xml` (urlset de l'anglais seul)
+
+Il n'y a **pas** de `/fr/sitemap.xml` : le francais est servi a la racine.
 
 Verifier apres build :
 ```bash
-hugo
-grep "<nouveau-slug>" public/fr/sitemap.xml public/en/sitemap.xml
+hugo --quiet -d /tmp/mc-public
+grep "<nouveau-slug>" /tmp/mc-public/sitemap.xml /tmp/mc-public/en/sitemap.xml
 ```
 
 ### 2. Le plan de site HTML (utilisateurs + bots)
@@ -320,21 +322,22 @@ Apres chaque nouvel article :
 ### Workflow post-publication
 
 ```bash
-# 1. Build
-hugo
+# 1. Build en sortie locale (public/ sur Google Drive met 20 min et plus)
+hugo --quiet -d /tmp/mc-public
 
 # 2. Verifier sitemap
-grep "<nouveau-slug>" public/fr/sitemap.xml
-grep "<nouveau-slug>" public/en/sitemap.xml  # si multilingue
+grep "<nouveau-slug>" /tmp/mc-public/sitemap.xml
+grep "<nouveau-slug>" /tmp/mc-public/en/sitemap.xml  # article EN
 
 # 3. Verifier plan de site HTML
-grep "<nouveau-slug>" public/plan-du-site/index.html
+grep "<nouveau-slug>" /tmp/mc-public/plan-du-site/index.html
+grep "<nouveau-slug>" /tmp/mc-public/en/site-map/index.html
 
 # 4. Verifier page auteur
-grep "<titre>" public/authors/<slug>/index.html
+grep "<titre>" /tmp/mc-public/authors/<slug>/index.html
 
 # 5. Verifier le footer (plan-du-site doit etre present)
-grep "plan-du-site" public/index.html
+grep "plan-du-site" /tmp/mc-public/index.html
 
 # 6. Verifier llms.txt (mise a jour manuelle)
 grep "<titre>" static/llms.txt

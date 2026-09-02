@@ -33,11 +33,17 @@ jobs:
         id: pages
         uses: actions/configure-pages@v5
 
+      # Pas de --baseURL ici : le baseURL de hugo.toml fait foi.
+      # configure-pages renvoie l'URL en http:// tant que "Enforce HTTPS" n'est pas
+      # actif, et le build sortait alors tous les canonical et hreflang en http://.
+      # A ne retirer que quand le domaine personnalise est en place ; sur un site
+      # encore servi sur l'URL de demo github.io, il faut au contraire garder
+      # l'override, sinon les liens pointent vers un domaine qui n'existe pas.
       - name: Build with Hugo
         env:
           HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
           HUGO_ENVIRONMENT: production
-        run: hugo --gc --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
+        run: hugo --gc --minify
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
