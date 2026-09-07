@@ -34,6 +34,15 @@ articles:
     published_url_en: "https://conseil.morning.fr/en/blog/company-registered-address-paris/"
     error: null
 
+  - kw: "budget team building"
+    category: "Organisation evenement"
+    scheduled_date: "2026-09-07"
+    status: done
+    published_date: "2026-09-07"
+    published_url_fr: "https://conseil.morning.fr/blog/budget-team-building/"
+    published_url_en: "https://conseil.morning.fr/en/blog/team-building-budget-per-person/"
+    error: null
+
   # A remplir par Manon (mots-cles evergreen bureaux / coworking / amenagement)
   # Exemple de format :
   # - kw: "prix coworking paris"
