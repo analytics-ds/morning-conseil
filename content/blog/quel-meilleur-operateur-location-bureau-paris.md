@@ -96,11 +96,15 @@ Ce modèle est dimensionné pour l'usage nomade : un poste à la journée, à pa
 
 Côté transparence, seuls les tarifs nomades sont publiés. Les formules de bureau privé passent par une demande de devis, comme chez Deskeo. La question du choix d'implantation est traitée en détail dans l'article [où installer ses bureaux à Paris](/blog/ou-installer-ses-bureaux-paris/).
 
+Les salles de réunion comptent aussi dans la comparaison : leur nombre, leur capacité et leur équipement varient fortement d'un opérateur à l'autre. Les critères qui font la différence à l'usage sont détaillés dans le guide pour [aménager une salle de réunion](/blog/amenager-salle-de-reunion/).
+
 ## WeWork et Regus, deux réseaux internationaux peu visibles sur le marché parisien
 
 WeWork et Regus n'apparaissent dans aucun résultat organique français sur les requêtes de location de bureaux à Paris. Leurs pages bloquent par ailleurs tout accès automatisé, et aucun tarif n'est consultable sans remplir un formulaire. Leurs lignes du tableau restent donc volontairement vides plutôt qu'estimées.
 
 Leur force est ailleurs : la couverture internationale sous contrat unique. Une entreprise qui veut des postes à Paris, Berlin et Singapour avec une seule facture trouvera chez eux une réponse que les opérateurs parisiens ne proposent pas. Pour une implantation strictement parisienne, cet avantage ne se traduit par aucun bénéfice concret.
+
+Regus se distingue sur un point : il vend la domiciliation seule, sans poste de travail, ce qui répond au besoin d'une structure qui cherche une adresse légale plutôt qu'un bureau. Les règles et le coût de cette prestation sont détaillés dans le guide de la [domiciliation d'entreprise à Paris](/blog/domiciliation-entreprise-paris/).
 
 ## Quel opérateur choisir selon votre besoin ?
 

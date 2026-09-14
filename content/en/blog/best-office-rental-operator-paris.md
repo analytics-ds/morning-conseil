@@ -96,11 +96,15 @@ This model is sized for nomad use: a desk by the day, from 69 € excl. VAT, in 
 
 On transparency, only the nomad rates are published. Private office formats go through a quotation request, as with Deskeo. The question of where to settle is covered in detail in the article on [where to locate offices in Paris](/blog/where-to-locate-offices-paris/).
 
+Meeting rooms also weigh on the comparison: their number, capacity and equipment vary widely from one operator to the next. The criteria that make the difference in daily use are detailed in the guide to [meeting room design](/blog/meeting-room-design/).
+
 ## WeWork and Regus, two international networks with little visibility on the Paris market
 
 WeWork and Regus appear in no French organic result for Paris office rental queries. Their pages also block any automated access, and no rate can be consulted without filling in a form. Their rows in the table therefore stay deliberately empty rather than estimated.
 
 Their strength lies elsewhere: international coverage under a single contract. A company that wants desks in Paris, Berlin and Singapore on one invoice will find an answer there that Paris operators do not offer. For a strictly Parisian footprint, that advantage translates into no concrete benefit.
+
+Regus stands out on one point: it sells the registered address on its own, with no desk attached, which answers the need of a structure looking for a legal address rather than an office. The rules and the cost of that service are detailed in the guide to the [registered office address in Paris](/blog/company-registered-address-paris/).
 
 ## Which operator should you choose for your needs?
 
