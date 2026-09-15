@@ -12,16 +12,15 @@ generes par `/create-article-auto`, `| manuel` pour ceux crees via `/create-arti
 - 2026-08-27 — Amenager une salle de reunion : acoustique, lumiere, mobilier (`/blog/amenager-salle-de-reunion/` + `/en/blog/meeting-room-design/`) | manuel
 - 2026-08-27 — Privatiser un lieu pour un seminaire a Paris (`/blog/privatiser-un-lieu-seminaire/` + `/en/blog/private-hire-venue-paris/`) | manuel
 - 2026-09-04 — Domiciliation d'entreprise a Paris : le guide (`/blog/domiciliation-entreprise-paris/` + `/en/blog/company-registered-address-paris/`) | auto
-- 2026-09-07 — Budget team building : le prix par personne (`/blog/budget-team-building/` + `/en/blog/team-building-budget-per-person/`) | auto
 - 2026-09-14 — Quel est le meilleur operateur pour louer un bureau a Paris ? (`/blog/quel-meilleur-operateur-location-bureau-paris/` + `/en/blog/best-office-rental-operator-paris/`) | manuel, article GEO comparatif
+- 2026-09-14 — Tendances bureaux 2026 : ce qui change vraiment l'amenagement (`/blog/tendances-bureaux-2026/` + `/en/blog/office-design-trends-2026/`) | manuel
 
 ## Quota hebdomadaire
 
 Regle du reseau : 4 articles par semaine maximum.
 
 - Semaine du 2026-08-31 au 2026-09-06 : 1 article publie (domiciliation)
-- Semaine du 2026-09-07 au 2026-09-13 : 1 article publie (budget team building)
-- Semaine du 2026-09-14 au 2026-09-20 : 1 article publie (GEO comparatif operateurs bureaux Paris)
+- Semaine du 2026-09-14 au 2026-09-20 : 2 articles publies (GEO comparatif operateurs bureaux Paris, tendances bureaux 2026)
 
 ## Notes techniques
 
