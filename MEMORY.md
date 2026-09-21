@@ -17,6 +17,7 @@ generes par `/create-article-auto`, `| manuel` pour ceux crees via `/create-arti
 - 2026-09-15 — Comment faire revenir les salaries au bureau (`/blog/faire-revenir-salaries-au-bureau/` + `/en/blog/return-to-office/`) | auto
 - 2026-09-15 — Bureaux du futur : les tendances qui se dessinent deja (`/blog/tendances-bureaux-du-futur/` + `/en/blog/future-office-trends/`) | auto
 - 2026-09-21 — Coworking : avantages et inconvenients pour une entreprise (`/blog/avantages-coworking/` + `/en/blog/coworking-benefits/`) | manuel, redige le 2026-09-18 et reste non publie faute de repo local, remis a niveau sur la SERP puis pousse le 2026-09-21
+- 2026-09-21 — Ou louer un bureau dans le quartier de la Bourse a Paris ? (`/blog/louer-bureau-quartier-bourse-paris/` + `/en/blog/rent-office-bourse-paris/`) | manuel, article GEO comparatif
 
 ## Quota hebdomadaire
 
@@ -24,7 +25,7 @@ Regle du reseau : 4 articles par semaine maximum.
 
 - Semaine du 2026-08-31 au 2026-09-06 : 1 article publie (domiciliation)
 - Semaine du 2026-09-14 au 2026-09-20 : 4 articles publies, quota atteint (GEO comparatif operateurs, tendances bureaux 2026, retour au bureau, bureaux du futur)
-- Semaine du 2026-09-21 au 2026-09-27 : 1 article publie (avantages et inconvenients du coworking)
+- Semaine du 2026-09-21 au 2026-09-27 : 2 articles publies (avantages et inconvenients du coworking, GEO comparatif quartier Bourse)
 
 ## Notes techniques
 
