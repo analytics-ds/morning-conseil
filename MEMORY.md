@@ -14,13 +14,17 @@ generes par `/create-article-auto`, `| manuel` pour ceux crees via `/create-arti
 - 2026-09-04 — Domiciliation d'entreprise a Paris : le guide (`/blog/domiciliation-entreprise-paris/` + `/en/blog/company-registered-address-paris/`) | auto
 - 2026-09-14 — Quel est le meilleur operateur pour louer un bureau a Paris ? (`/blog/quel-meilleur-operateur-location-bureau-paris/` + `/en/blog/best-office-rental-operator-paris/`) | manuel, article GEO comparatif
 - 2026-09-14 — Tendances bureaux 2026 : ce qui change vraiment l'amenagement (`/blog/tendances-bureaux-2026/` + `/en/blog/office-design-trends-2026/`) | manuel
+- 2026-09-15 — Comment faire revenir les salaries au bureau (`/blog/faire-revenir-salaries-au-bureau/` + `/en/blog/return-to-office/`) | auto
+- 2026-09-15 — Bureaux du futur : les tendances qui se dessinent deja (`/blog/tendances-bureaux-du-futur/` + `/en/blog/future-office-trends/`) | auto
+- 2026-09-21 — Coworking : avantages et inconvenients pour une entreprise (`/blog/avantages-coworking/` + `/en/blog/coworking-benefits/`) | manuel, redige le 2026-09-18 et reste non publie faute de repo local, remis a niveau sur la SERP puis pousse le 2026-09-21
 
 ## Quota hebdomadaire
 
 Regle du reseau : 4 articles par semaine maximum.
 
 - Semaine du 2026-08-31 au 2026-09-06 : 1 article publie (domiciliation)
-- Semaine du 2026-09-14 au 2026-09-20 : 2 articles publies (GEO comparatif operateurs bureaux Paris, tendances bureaux 2026)
+- Semaine du 2026-09-14 au 2026-09-20 : 4 articles publies, quota atteint (GEO comparatif operateurs, tendances bureaux 2026, retour au bureau, bureaux du futur)
+- Semaine du 2026-09-21 au 2026-09-27 : 1 article publie (avantages et inconvenients du coworking)
 
 ## Notes techniques
 
@@ -32,3 +36,13 @@ Regle du reseau : 4 articles par semaine maximum.
   ne contient plus rien, Google Drive ne synchronise pas correctement les objets git.
   Le repo distant `analytics-ds/morning-conseil` reste la reference. Toute reprise du
   versionnement passe par un clone hors Google Drive.
+
+- **Le `MEMORY.md` du Drive et celui du repo divergent** (constate le 2026-09-21). Le
+  Drive journalisait des articles jamais pousses (le `.git` local etant vide), pendant
+  que la routine cloud en publiait d'autres directement sur le repo. Le **repo fait foi**
+  sur l'etat publie ; ne jamais deduire ce qui est en ligne du `MEMORY.md` du Drive.
+  Verification qui tranche : `curl -s https://conseil.morning.fr/sitemap.xml`.
+- **Le suffixe ` | Morning Conseil` coute 161 px** sur les 580 px de la balise title, il
+  ne reste donc que **419 px utiles**. Plusieurs articles anterieurs depassent la limite
+  (l'ancien title de l'article coworking etait a 688 px). Mesurer le title AVEC le
+  suffixe, avec la table Arial de la skill `tech-title`, avant de le figer.
