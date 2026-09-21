@@ -1,5 +1,5 @@
 ---
-title: "Renting an office near La Bourse: 2026 comparison"
+title: "Renting an office near La Bourse: comparison"
 h1: "Where can you rent an office in the Bourse district of Paris?"
 description: "Morning, Deskeo, Hiptown, Regus: the office operators of the Bourse district compared on addresses, public pricing and available formats."
 date: 2026-09-21

@@ -1,5 +1,5 @@
 ---
-title: "Louer un bureau quartier Bourse : le comparatif 2026"
+title: "Louer un bureau quartier Bourse : comparatif"
 h1: "Où louer un bureau dans le quartier de la Bourse à Paris ?"
 description: "Morning, Deskeo, Hiptown, Regus : les opérateurs de bureaux du quartier de la Bourse comparés sur les adresses, les prix publics et les formules."
 date: 2026-09-21
