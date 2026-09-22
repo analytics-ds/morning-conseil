@@ -47,13 +47,13 @@ articles:
   # Roadmap 6 mois construite le 2026-09-22 par analyse concurrentielle
   # (keyword gap Haloscan vs spliit.fr, ubiq.fr, wojo.com, deskeo.com,
   # hiptown.com, bureauxlocaux.com + volumes verifies en bulk).
-  # 52 entrees, 2 par semaine (mardi + vendredi), du 2026-09-25 au 2027-03-23.
+  # 52 entrees, 2 par semaine (mardi + vendredi), du 2026-09-22 au 2027-03-19.
   # Les 17 articles deja en ligne ont ete exclus pour eviter la cannibalisation.
   # -------------------------------------------------------------------
 
   - kw: "centre d'affaires"
     category: "Location de bureaux"
-    scheduled_date: "2026-09-25"
+    scheduled_date: "2026-09-22"
     status: todo
     published_date: null
     published_url_fr: null
@@ -63,7 +63,7 @@ articles:
 
   - kw: "bureau assis debout"
     category: "Amenagement"
-    scheduled_date: "2026-09-29"
+    scheduled_date: "2026-09-25"
     status: todo
     published_date: null
     published_url_fr: null
@@ -73,7 +73,7 @@ articles:
 
   - kw: "methode pomodoro"
     category: "Productivite"
-    scheduled_date: "2026-10-02"
+    scheduled_date: "2026-09-29"
     status: todo
     published_date: null
     published_url_fr: null
@@ -83,7 +83,7 @@ articles:
 
   - kw: "jeux pour team building"
     category: "Organisation evenement"
-    scheduled_date: "2026-10-06"
+    scheduled_date: "2026-10-02"
     status: todo
     published_date: null
     published_url_fr: null
@@ -93,7 +93,7 @@ articles:
 
   - kw: "espaces collaboratifs"
     category: "Coworking"
-    scheduled_date: "2026-10-09"
+    scheduled_date: "2026-10-06"
     status: todo
     published_date: null
     published_url_fr: null
@@ -103,7 +103,7 @@ articles:
 
   - kw: "salle de reunion moderne"
     category: "Salle de reunion"
-    scheduled_date: "2026-10-13"
+    scheduled_date: "2026-10-09"
     status: todo
     published_date: null
     published_url_fr: null
@@ -113,7 +113,7 @@ articles:
 
   - kw: "resiliation bail commercial"
     category: "Location de bureaux"
-    scheduled_date: "2026-10-16"
+    scheduled_date: "2026-10-13"
     status: todo
     published_date: null
     published_url_fr: null
@@ -123,7 +123,7 @@ articles:
 
   - kw: "climatisation bureau"
     category: "Amenagement"
-    scheduled_date: "2026-10-20"
+    scheduled_date: "2026-10-16"
     status: todo
     published_date: null
     published_url_fr: null
@@ -133,7 +133,7 @@ articles:
 
   - kw: "deep work"
     category: "Productivite"
-    scheduled_date: "2026-10-23"
+    scheduled_date: "2026-10-20"
     status: todo
     published_date: null
     published_url_fr: null
@@ -143,7 +143,7 @@ articles:
 
   - kw: "team building sportif"
     category: "Organisation evenement"
-    scheduled_date: "2026-10-27"
+    scheduled_date: "2026-10-23"
     status: todo
     published_date: null
     published_url_fr: null
@@ -153,7 +153,7 @@ articles:
 
   - kw: "workation"
     category: "Coworking"
-    scheduled_date: "2026-10-30"
+    scheduled_date: "2026-10-27"
     status: todo
     published_date: null
     published_url_fr: null
@@ -163,7 +163,7 @@ articles:
 
   - kw: "ecran salle de reunion"
     category: "Salle de reunion"
-    scheduled_date: "2026-11-03"
+    scheduled_date: "2026-10-30"
     status: todo
     published_date: null
     published_url_fr: null
@@ -173,7 +173,7 @@ articles:
 
   - kw: "pepiniere d'entreprises"
     category: "Location de bureaux"
-    scheduled_date: "2026-11-06"
+    scheduled_date: "2026-11-03"
     status: todo
     published_date: null
     published_url_fr: null
@@ -183,7 +183,7 @@ articles:
 
   - kw: "surface minimum bureau code du travail"
     category: "Amenagement"
-    scheduled_date: "2026-11-10"
+    scheduled_date: "2026-11-06"
     status: todo
     published_date: null
     published_url_fr: null
@@ -193,7 +193,7 @@ articles:
 
   - kw: "semaine de 4 jours"
     category: "Productivite"
-    scheduled_date: "2026-11-13"
+    scheduled_date: "2026-11-10"
     status: todo
     published_date: null
     published_url_fr: null
@@ -203,7 +203,7 @@ articles:
 
   - kw: "team building rse"
     category: "Organisation evenement"
-    scheduled_date: "2026-11-17"
+    scheduled_date: "2026-11-13"
     status: todo
     published_date: null
     published_url_fr: null
@@ -213,7 +213,7 @@ articles:
 
   - kw: "le coffice"
     category: "Coworking"
-    scheduled_date: "2026-11-20"
+    scheduled_date: "2026-11-17"
     status: todo
     published_date: null
     published_url_fr: null
@@ -223,7 +223,7 @@ articles:
 
   - kw: "disposition salle de reunion"
     category: "Salle de reunion"
-    scheduled_date: "2026-11-24"
+    scheduled_date: "2026-11-20"
     status: todo
     published_date: null
     published_url_fr: null
@@ -233,7 +233,7 @@ articles:
 
   - kw: "renouvellement bail commercial"
     category: "Location de bureaux"
-    scheduled_date: "2026-11-27"
+    scheduled_date: "2026-11-24"
     status: todo
     published_date: null
     published_url_fr: null
@@ -243,7 +243,7 @@ articles:
 
   - kw: "phone box bureau"
     category: "Amenagement"
-    scheduled_date: "2026-12-01"
+    scheduled_date: "2026-11-27"
     status: todo
     published_date: null
     published_url_fr: null
@@ -253,7 +253,7 @@ articles:
 
   - kw: "team building cuisine"
     category: "Organisation evenement"
-    scheduled_date: "2026-12-04"
+    scheduled_date: "2026-12-01"
     status: todo
     published_date: null
     published_url_fr: null
@@ -263,7 +263,7 @@ articles:
 
   - kw: "seminaire au vert"
     category: "Organisation evenement"
-    scheduled_date: "2026-12-08"
+    scheduled_date: "2026-12-04"
     status: todo
     published_date: null
     published_url_fr: null
@@ -273,7 +273,7 @@ articles:
 
   - kw: "bureau ferme"
     category: "Coworking"
-    scheduled_date: "2026-12-11"
+    scheduled_date: "2026-12-08"
     status: todo
     published_date: null
     published_url_fr: null
@@ -283,7 +283,7 @@ articles:
 
   - kw: "petite salle de reunion"
     category: "Salle de reunion"
-    scheduled_date: "2026-12-15"
+    scheduled_date: "2026-12-11"
     status: todo
     published_date: null
     published_url_fr: null
@@ -293,7 +293,7 @@ articles:
 
   - kw: "depot de garantie bail commercial"
     category: "Location de bureaux"
-    scheduled_date: "2026-12-18"
+    scheduled_date: "2026-12-15"
     status: todo
     published_date: null
     published_url_fr: null
@@ -303,7 +303,7 @@ articles:
 
   - kw: "signaletique bureaux"
     category: "Amenagement"
-    scheduled_date: "2026-12-22"
+    scheduled_date: "2026-12-18"
     status: todo
     published_date: null
     published_url_fr: null
@@ -313,7 +313,7 @@ articles:
 
   - kw: "droit a la deconnexion"
     category: "Productivite"
-    scheduled_date: "2026-12-25"
+    scheduled_date: "2026-12-22"
     status: todo
     published_date: null
     published_url_fr: null
@@ -323,7 +323,7 @@ articles:
 
   - kw: "team building solidaire"
     category: "Organisation evenement"
-    scheduled_date: "2026-12-29"
+    scheduled_date: "2026-12-25"
     status: todo
     published_date: null
     published_url_fr: null
@@ -333,7 +333,7 @@ articles:
 
   - kw: "affichage obligatoire entreprise"
     category: "Location de bureaux"
-    scheduled_date: "2027-01-01"
+    scheduled_date: "2026-12-29"
     status: todo
     published_date: null
     published_url_fr: null
@@ -343,7 +343,7 @@ articles:
 
   - kw: "salle de sieste entreprise"
     category: "Amenagement"
-    scheduled_date: "2027-01-05"
+    scheduled_date: "2027-01-01"
     status: todo
     published_date: null
     published_url_fr: null
@@ -353,7 +353,7 @@ articles:
 
   - kw: "management a distance"
     category: "Productivite"
-    scheduled_date: "2027-01-08"
+    scheduled_date: "2027-01-05"
     status: todo
     published_date: null
     published_url_fr: null
@@ -363,7 +363,7 @@ articles:
 
   - kw: "team building a distance"
     category: "Organisation evenement"
-    scheduled_date: "2027-01-12"
+    scheduled_date: "2027-01-08"
     status: todo
     published_date: null
     published_url_fr: null
@@ -373,7 +373,7 @@ articles:
 
   - kw: "surface utile brute"
     category: "Location de bureaux"
-    scheduled_date: "2027-01-15"
+    scheduled_date: "2027-01-12"
     status: todo
     published_date: null
     published_url_fr: null
@@ -383,7 +383,7 @@ articles:
 
   - kw: "amenagement bureaux"
     category: "Amenagement"
-    scheduled_date: "2027-01-19"
+    scheduled_date: "2027-01-15"
     status: todo
     published_date: null
     published_url_fr: null
@@ -393,7 +393,7 @@ articles:
 
   - kw: "lien social au travail"
     category: "Productivite"
-    scheduled_date: "2027-01-22"
+    scheduled_date: "2027-01-19"
     status: todo
     published_date: null
     published_url_fr: null
@@ -403,7 +403,7 @@ articles:
 
   - kw: "afterwork entreprise"
     category: "Organisation evenement"
-    scheduled_date: "2027-01-26"
+    scheduled_date: "2027-01-22"
     status: todo
     published_date: null
     published_url_fr: null
@@ -413,7 +413,7 @@ articles:
 
   - kw: "bureau opere"
     category: "Location de bureaux"
-    scheduled_date: "2027-01-29"
+    scheduled_date: "2027-01-26"
     status: todo
     published_date: null
     published_url_fr: null
@@ -423,7 +423,7 @@ articles:
 
   - kw: "plante bureau anti stress"
     category: "Amenagement"
-    scheduled_date: "2027-02-02"
+    scheduled_date: "2027-01-29"
     status: todo
     published_date: null
     published_url_fr: null
@@ -433,7 +433,7 @@ articles:
 
   - kw: "happiness chief officer"
     category: "Productivite"
-    scheduled_date: "2027-02-05"
+    scheduled_date: "2027-02-02"
     status: todo
     published_date: null
     published_url_fr: null
@@ -443,7 +443,7 @@ articles:
 
   - kw: "bureaux start up"
     category: "Location de bureaux"
-    scheduled_date: "2027-02-09"
+    scheduled_date: "2027-02-05"
     status: todo
     published_date: null
     published_url_fr: null
@@ -453,7 +453,7 @@ articles:
 
   - kw: "4 m2 par salarie"
     category: "Amenagement"
-    scheduled_date: "2027-02-12"
+    scheduled_date: "2027-02-09"
     status: todo
     published_date: null
     published_url_fr: null
@@ -463,7 +463,7 @@ articles:
 
   - kw: "cohesion d'equipes"
     category: "Productivite"
-    scheduled_date: "2027-02-16"
+    scheduled_date: "2027-02-12"
     status: todo
     published_date: null
     published_url_fr: null
@@ -473,7 +473,7 @@ articles:
 
   - kw: "modele bail location bureau domicile"
     category: "Location de bureaux"
-    scheduled_date: "2027-02-19"
+    scheduled_date: "2027-02-16"
     status: todo
     published_date: null
     published_url_fr: null
@@ -483,7 +483,7 @@ articles:
 
   - kw: "bureau ecologie"
     category: "Amenagement"
-    scheduled_date: "2027-02-23"
+    scheduled_date: "2027-02-19"
     status: todo
     published_date: null
     published_url_fr: null
@@ -493,7 +493,7 @@ articles:
 
   - kw: "flat organisation"
     category: "Productivite"
-    scheduled_date: "2027-02-26"
+    scheduled_date: "2027-02-23"
     status: todo
     published_date: null
     published_url_fr: null
@@ -503,7 +503,7 @@ articles:
 
   - kw: "bail commercial 3 6 9"
     category: "Location de bureaux"
-    scheduled_date: "2027-03-02"
+    scheduled_date: "2027-02-26"
     status: todo
     published_date: null
     published_url_fr: null
@@ -513,7 +513,7 @@ articles:
 
   - kw: "peinture bureau"
     category: "Amenagement"
-    scheduled_date: "2027-03-05"
+    scheduled_date: "2027-03-02"
     status: todo
     published_date: null
     published_url_fr: null
@@ -523,7 +523,7 @@ articles:
 
   - kw: "trajet maison travail"
     category: "Productivite"
-    scheduled_date: "2027-03-09"
+    scheduled_date: "2027-03-05"
     status: todo
     published_date: null
     published_url_fr: null
@@ -533,7 +533,7 @@ articles:
 
   - kw: "location bureau prix m2"
     category: "Location de bureaux"
-    scheduled_date: "2027-03-12"
+    scheduled_date: "2027-03-09"
     status: todo
     published_date: null
     published_url_fr: null
@@ -543,7 +543,7 @@ articles:
 
   - kw: "acoustique bureau"
     category: "Amenagement"
-    scheduled_date: "2027-03-16"
+    scheduled_date: "2027-03-12"
     status: todo
     published_date: null
     published_url_fr: null
@@ -553,7 +553,7 @@ articles:
 
   - kw: "demenagement entreprise obligation employeur"
     category: "Location de bureaux"
-    scheduled_date: "2027-03-19"
+    scheduled_date: "2027-03-16"
     status: todo
     published_date: null
     published_url_fr: null
@@ -563,7 +563,7 @@ articles:
 
   - kw: "eclairage bureau norme"
     category: "Amenagement"
-    scheduled_date: "2027-03-23"
+    scheduled_date: "2027-03-19"
     status: todo
     published_date: null
     published_url_fr: null
