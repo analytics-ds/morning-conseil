@@ -43,13 +43,530 @@ articles:
     published_url_en: "https://conseil.morning.fr/en/blog/team-building-budget-per-person/"
     error: null
 
-  # A remplir par Manon (mots-cles evergreen bureaux / coworking / amenagement)
-  # Exemple de format :
-  # - kw: "prix coworking paris"
-  #   category: "Coworking"
-  #   scheduled_date: "2026-09-01"
-  #   status: todo
-  #   published_date: null
-  #   published_url_fr: null
-  #   published_url_en: null
-  #   error: null
+  # -------------------------------------------------------------------
+  # Roadmap 6 mois construite le 2026-09-22 par analyse concurrentielle
+  # (keyword gap Haloscan vs spliit.fr, ubiq.fr, wojo.com, deskeo.com,
+  # hiptown.com, bureauxlocaux.com + volumes verifies en bulk).
+  # 52 entrees, 2 par semaine (mardi + vendredi), du 2026-09-25 au 2027-03-23.
+  # Les 17 articles deja en ligne ont ete exclus pour eviter la cannibalisation.
+  # -------------------------------------------------------------------
+
+  - kw: "centre d'affaires"
+    category: "Location de bureaux"
+    scheduled_date: "2026-09-25"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+    # volume Haloscan : 1727/mois
+
+  - kw: "bureau assis debout"
+    category: "Amenagement"
+    scheduled_date: "2026-09-29"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+    # volume Haloscan : 1700/mois
+
+  - kw: "methode pomodoro"
+    category: "Productivite"
+    scheduled_date: "2026-10-02"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+    # volume Haloscan : 1727/mois
+
+  - kw: "jeux pour team building"
+    category: "Organisation evenement"
+    scheduled_date: "2026-10-06"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+    # volume Haloscan : 590/mois
+
+  - kw: "espaces collaboratifs"
+    category: "Coworking"
+    scheduled_date: "2026-10-09"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+    # volume Haloscan : 390/mois
+
+  - kw: "animer une reunion"
+    category: "Salle de reunion"
+    scheduled_date: "2026-10-13"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+    # volume Haloscan : 355/mois
+
+  - kw: "resiliation bail commercial"
+    category: "Location de bureaux"
+    scheduled_date: "2026-10-16"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+    # volume Haloscan : 1000/mois
+
+  - kw: "climatisation bureau"
+    category: "Amenagement"
+    scheduled_date: "2026-10-20"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+    # volume Haloscan : 320/mois
+
+  - kw: "deep work"
+    category: "Productivite"
+    scheduled_date: "2026-10-23"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+    # volume Haloscan : 1600/mois
+
+  - kw: "team building sportif"
+    category: "Organisation evenement"
+    scheduled_date: "2026-10-27"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+    # volume Haloscan : 480/mois
+
+  - kw: "workation"
+    category: "Coworking"
+    scheduled_date: "2026-10-30"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+    # volume Haloscan : 300/mois
+
+  - kw: "ecran salle de reunion"
+    category: "Salle de reunion"
+    scheduled_date: "2026-11-03"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+    # volume Haloscan : 300/mois
+
+  - kw: "pepiniere d'entreprises"
+    category: "Location de bureaux"
+    scheduled_date: "2026-11-06"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+    # volume Haloscan : 1000/mois
+
+  - kw: "surface minimum bureau code du travail"
+    category: "Amenagement"
+    scheduled_date: "2026-11-10"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+    # volume Haloscan : 320/mois
+
+  - kw: "semaine de 4 jours"
+    category: "Productivite"
+    scheduled_date: "2026-11-13"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+    # volume Haloscan : 1200/mois
+
+  - kw: "team building rse"
+    category: "Organisation evenement"
+    scheduled_date: "2026-11-17"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+    # volume Haloscan : 400/mois
+
+  - kw: "le coffice"
+    category: "Coworking"
+    scheduled_date: "2026-11-20"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+    # volume Haloscan : 100/mois
+
+  - kw: "disposition salle de reunion"
+    category: "Salle de reunion"
+    scheduled_date: "2026-11-24"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+    # volume Haloscan : 210/mois
+
+  - kw: "renouvellement bail commercial"
+    category: "Location de bureaux"
+    scheduled_date: "2026-11-27"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+    # volume Haloscan : 600/mois
+
+  - kw: "phone box bureau"
+    category: "Amenagement"
+    scheduled_date: "2026-12-01"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+    # volume Haloscan : 236/mois
+
+  - kw: "travail hybride"
+    category: "Productivite"
+    scheduled_date: "2026-12-04"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+    # volume Haloscan : 800/mois
+
+  - kw: "seminaire au vert"
+    category: "Organisation evenement"
+    scheduled_date: "2026-12-08"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+    # volume Haloscan : 400/mois
+
+  - kw: "bureau ferme"
+    category: "Coworking"
+    scheduled_date: "2026-12-11"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+    # volume Haloscan : 80/mois
+
+  - kw: "petite salle de reunion"
+    category: "Salle de reunion"
+    scheduled_date: "2026-12-15"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+    # volume Haloscan : 100/mois
+
+  - kw: "depot de garantie bail commercial"
+    category: "Location de bureaux"
+    scheduled_date: "2026-12-18"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+    # volume Haloscan : 500/mois
+
+  - kw: "signaletique bureaux"
+    category: "Amenagement"
+    scheduled_date: "2026-12-22"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+    # volume Haloscan : 162/mois
+
+  - kw: "droit a la deconnexion"
+    category: "Productivite"
+    scheduled_date: "2026-12-25"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+    # volume Haloscan : 590/mois
+
+  - kw: "team building solidaire"
+    category: "Organisation evenement"
+    scheduled_date: "2026-12-29"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+    # volume Haloscan : 400/mois
+
+  - kw: "affichage obligatoire entreprise"
+    category: "Location de bureaux"
+    scheduled_date: "2027-01-01"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+    # volume Haloscan : 300/mois
+
+  - kw: "salle de sieste entreprise"
+    category: "Amenagement"
+    scheduled_date: "2027-01-05"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+    # volume Haloscan : 140/mois
+
+  - kw: "management a distance"
+    category: "Productivite"
+    scheduled_date: "2027-01-08"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+    # volume Haloscan : 260/mois
+
+  - kw: "team building a distance"
+    category: "Organisation evenement"
+    scheduled_date: "2027-01-12"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+    # volume Haloscan : 260/mois
+
+  - kw: "surface utile brute"
+    category: "Location de bureaux"
+    scheduled_date: "2027-01-15"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+    # volume Haloscan : 210/mois
+
+  - kw: "amenagement bureaux"
+    category: "Amenagement"
+    scheduled_date: "2027-01-19"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+    # volume Haloscan : 126/mois
+
+  - kw: "lien social au travail"
+    category: "Productivite"
+    scheduled_date: "2027-01-22"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+    # volume Haloscan : 110/mois
+
+  - kw: "afterwork entreprise"
+    category: "Organisation evenement"
+    scheduled_date: "2027-01-26"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+    # volume Haloscan : 100/mois
+
+  - kw: "bureau opere"
+    category: "Location de bureaux"
+    scheduled_date: "2027-01-29"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+    # volume Haloscan : 210/mois
+
+  - kw: "plante bureau anti stress"
+    category: "Amenagement"
+    scheduled_date: "2027-02-02"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+    # volume Haloscan : 110/mois
+
+  - kw: "happiness chief officer"
+    category: "Productivite"
+    scheduled_date: "2027-02-05"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+    # volume Haloscan : 110/mois
+
+  - kw: "bureaux start up"
+    category: "Location de bureaux"
+    scheduled_date: "2027-02-09"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+    # volume Haloscan : 170/mois
+
+  - kw: "4 m2 par salarie"
+    category: "Amenagement"
+    scheduled_date: "2027-02-12"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+    # volume Haloscan : 110/mois
+
+  - kw: "cohesion d'equipes"
+    category: "Productivite"
+    scheduled_date: "2027-02-16"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+    # volume Haloscan : 106/mois
+
+  - kw: "modele bail location bureau domicile"
+    category: "Location de bureaux"
+    scheduled_date: "2027-02-19"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+    # volume Haloscan : 170/mois
+
+  - kw: "bureau ecologie"
+    category: "Amenagement"
+    scheduled_date: "2027-02-23"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+    # volume Haloscan : 110/mois
+
+  - kw: "flat organisation"
+    category: "Productivite"
+    scheduled_date: "2027-02-26"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+    # volume Haloscan : 90/mois
+
+  - kw: "bail commercial 3 6 9"
+    category: "Location de bureaux"
+    scheduled_date: "2027-03-02"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+    # volume Haloscan : 114/mois
+
+  - kw: "peinture bureau"
+    category: "Amenagement"
+    scheduled_date: "2027-03-05"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+    # volume Haloscan : 80/mois
+
+  - kw: "trajet maison travail"
+    category: "Productivite"
+    scheduled_date: "2027-03-09"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+    # volume Haloscan : 90/mois
+
+  - kw: "location bureau prix m2"
+    category: "Location de bureaux"
+    scheduled_date: "2027-03-12"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+    # volume Haloscan : 110/mois
+
+  - kw: "acoustique bureau"
+    category: "Amenagement"
+    scheduled_date: "2027-03-16"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+    # volume Haloscan : 70/mois
+
+  - kw: "demenagement entreprise obligation employeur"
+    category: "Location de bureaux"
+    scheduled_date: "2027-03-19"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+    # volume Haloscan : 90/mois
+
+  - kw: "eclairage bureau norme"
+    category: "Amenagement"
+    scheduled_date: "2027-03-23"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+    # volume Haloscan : 60/mois
