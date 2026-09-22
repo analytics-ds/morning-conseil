@@ -1,0 +1,48 @@
+=== create-article-auto — morning-conseil — 2026-09-22 ===
+
+Entree roadmap  : kw "centre d'affaires" | category "Location de bureaux" | scheduled_date 2026-09-22
+
+Etape 1 — analyse semantique
+  DATAFER 401 cle invalide  -> repli crazyserp (regle 1.5 cas 2)
+  CRAZYSERP 200, 1 credit, 10 resultats organiques, 4 PAA, 7 recherches associees
+  AIO : Non declenchee
+  Volume : 1900/mois en moyenne 12 mois (14 500 cumul 2026 partiel, 21 400 en 2025), CPC 5 a 20 EUR
+  Intention : informationnelle dominante (4 guides definitionnels dans le top 10),
+              couche commerciale (annuaires + operateurs)
+  Concurrents : centres-d-affaires.fr, legalplace.fr, emergence-buro.com, sedomicilier.fr,
+                centre-affaires-metropole.fr, matchoffice.fr, kandbaz.com,
+                centredaffairescreteil.com, le-lodge.fr, mappy.com
+  Sujets retenus (3+ concurrents) : definition, services inclus, avantages et couts,
+                location de bureaux equipes, domiciliation
+  Differenciation : nature juridique du contrat (prestation de services vs bail commercial),
+                traitee par aucun des 4 guides concurrents
+  Tableau : oui (2 tableaux, comparatif des formats + grille tarifaire)
+  FAQ : oui, 6 questions construites sur les 4 PAA reformules + 2 recherches associees
+
+Etape 2 — title et meta (table Arial, skill tech-title)
+  Title FR  548 px / 580 (suffixe " | Morning Conseil" inclus, 161 px)
+  Title EN  577 px / 580
+  Meta FR   842 px / 920
+  Meta EN   834 px / 920 (raccourcie apres premiere mesure a 936 px)
+
+Etape 4 — auteur : camille-deshayes (topics bureaux / location de bureaux / bail / domiciliation)
+
+Etape 5 — image hero
+  Source : https://www.morning.fr/bureaux (variante Webflow -p-1600)
+  Fichier : static/images/blog/espace-travail-equipe-morning.webp  1600x1067  142 Ko
+  Photo reelle d'un espace Morning, aucune banque d'images
+  Note : /bureaux-coworking renvoie desormais une 404, la page vivante est /bureaux
+
+Etape 6 — maillage interne : 6 liens FR, 6 liens EN, intra-langue, + 1 lien sortant morning.fr
+
+Etape 7bis — SCORE : non mesure (mode crazyserp, Datafer indisponible)
+
+Etape 9 — build hugo exit 0, sur les deux baseURL (production et demo sous-repertoire)
+  Verifs : sitemap FR/EN, plan de site FR/EN, page auteur FR/EN, liste blog FR/EN,
+           page categorie FR/EN, llms.txt, hreflang croise, JSON-LD FAQPage  -> toutes OK
+
+Longueur : 1588 mots FR, 1479 mots EN (plancher 800 respecte)
+
+ALERTE quota : 5e article de la semaine du 2026-09-21, limite reseau a 4.
+
+Exit code : 0
