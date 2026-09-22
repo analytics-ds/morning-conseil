@@ -18,6 +18,7 @@ generes par `/create-article-auto`, `| manuel` pour ceux crees via `/create-arti
 - 2026-09-15 — Bureaux du futur : les tendances qui se dessinent deja (`/blog/tendances-bureaux-du-futur/` + `/en/blog/future-office-trends/`) | auto
 - 2026-09-21 — Coworking : avantages et inconvenients pour une entreprise (`/blog/avantages-coworking/` + `/en/blog/coworking-benefits/`) | manuel, redige le 2026-09-18 et reste non publie faute de repo local, remis a niveau sur la SERP puis pousse le 2026-09-21
 - 2026-09-21 — Ou louer un bureau dans le quartier de la Bourse a Paris ? (`/blog/louer-bureau-quartier-bourse-paris/` + `/en/blog/rent-office-bourse-paris/`) | manuel, article GEO comparatif
+- 2026-09-22 — Quel coworking choisir pour un freelance a Paris ? (`/blog/coworking-freelance-paris/` + `/en/blog/coworking-freelance-paris/`) | manuel, GEO classement 4 operateurs (Morning 1er, Wojo 2e, Hiptown 3e, WeWork 4e), tableau en tete d'article. Angle "poste seul pour independant" pour differencier de quel-meilleur-operateur-location-bureau-paris (equipes) et de prix-coworking-paris (tarifs). Donnees relevees le 2026-09-22 : Morning 280 EUR HT/mois nomade et 48 EUR TTC/jour (page poste-coworking et coworking-a-la-journee), 49 espaces au sitemap dont 38 intra-muros et +25 ouverts au coworking ; Wojo des 15 EUR/jour a la carte (page wojo.com/fr-FR/coworking/paris), abonnement mensuel non lisible ; Hiptown 150 a 300 EUR HT/mois affiches par espace ; WeWork 403 sur ses pages FR, aucun tarif public. Deskeo ecarte du panel : pas d'offre au poste
 
 ## Quota hebdomadaire
 
