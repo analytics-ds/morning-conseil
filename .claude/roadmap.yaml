@@ -101,7 +101,7 @@ articles:
     error: null
     # volume Haloscan : 390/mois
 
-  - kw: "animer une reunion"
+  - kw: "salle de reunion moderne"
     category: "Salle de reunion"
     scheduled_date: "2026-10-13"
     status: todo
@@ -109,7 +109,7 @@ articles:
     published_url_fr: null
     published_url_en: null
     error: null
-    # volume Haloscan : 355/mois
+    # volume Haloscan : 291/mois
 
   - kw: "resiliation bail commercial"
     category: "Location de bureaux"
@@ -251,15 +251,15 @@ articles:
     error: null
     # volume Haloscan : 236/mois
 
-  - kw: "travail hybride"
-    category: "Productivite"
+  - kw: "team building cuisine"
+    category: "Organisation evenement"
     scheduled_date: "2026-12-04"
     status: todo
     published_date: null
     published_url_fr: null
     published_url_en: null
     error: null
-    # volume Haloscan : 800/mois
+    # volume Haloscan : 400/mois
 
   - kw: "seminaire au vert"
     category: "Organisation evenement"
