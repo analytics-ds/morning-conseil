@@ -14,7 +14,7 @@ Elle est destinee a etre declenchee par une routine planifiee (ex: 2x/semaine a 
 - `.claude/roadmap.yaml` existe et contient au moins une entree `status: todo`.
 - `hugo.toml` configure avec la langue principale + la langue EN.
 - `data/authors.yaml` present (systeme d'auteurs partage).
-- `content/blog/` existe (peut etre vide pour un premier article).
+- `content/fr/blog/` existe (peut etre vide pour un premier article).
 - Remote git `origin` configure, acces push.
 - Cles `DATAFER_API_KEY` et `CRAZYSERP_API_KEY` exportees par le prompt de la routine (Datafer est la source nominale, CrazySERP le repli et le check AI Overview). Outil `WebSearch` disponible en repli. Si tout manque, la skill degrade en mode "kw seul" sans echouer.
 
@@ -24,7 +24,7 @@ Aucune question a l'utilisateur. Toutes les decisions sont prises par l'agent a 
 - Le mot-cle de la roadmap
 - L'analyse SERP automatique
 - Le contexte du site (CLAUDE.md du blog, authors.yaml, hugo.toml)
-- Les articles deja publies (scan `content/blog/`)
+- Les articles deja publies (scan `content/fr/blog/`)
 
 Si une etape bloque (image introuvable, build Hugo echoue, push rejete apres rebase), l'agent **n'insiste pas** : il marque l'entree `status: failed` dans la roadmap avec le message d'erreur, commit le roadmap, et sort proprement en exit code non-zero.
 
@@ -277,7 +277,7 @@ curl -sL "<url-sans-extension>-p-1600.webp" -o "static/images/blog/<nom-parlant>
 
 ## Etape 6 — Maillage interne auto
 
-1. Lister tous les `.md` dans `content/blog/` (articles FR uniquement pour cette passe).
+1. Lister tous les `.md` dans `content/fr/blog/` (articles FR uniquement pour cette passe).
 2. Lire le frontmatter de chacun : `title`, `kw` (via slug), `categories`, `tags`.
 3. Scorer chaque article par proximite avec le nouveau (categorie identique = +3, tags partages = +1 par tag, mots communs entre kw = +2).
 4. Garder les 3 a 5 meilleurs scores.
@@ -290,7 +290,7 @@ Si le blog a moins de 3 articles FR publies : faire au mieux avec ce qui existe 
 
 ## Etape 7 — Redaction FR complete
 
-Produire le fichier `content/blog/[slug-fr].md`.
+Produire le fichier `content/fr/blog/[slug-fr].md`.
 
 ### Frontmatter
 ```yaml
@@ -318,7 +318,7 @@ readingTime: true
 ### Body
 - Premier paragraphe : contient le `kw` naturellement, pose le contexte.
 - Respecter la structure Hn de l'etape 3. Aucune section ajoutee, aucune supprimee.
-- Longueur cible : moyenne des concurrents +/- 10% (ex: si moyenne = 1600 mots, viser 1440-1760), **avec un plancher absolu de 800 mots**. Si la moyenne des concurrents est inferieure a 800, viser 800 quand meme. Verifier avant le build : `wc -w content/blog/[slug].md` et `wc -w content/en/blog/[slug-en].md`. En dessous de 800 mots sur l'une des deux langues, enrichir, ne pas publier.
+- Longueur cible : moyenne des concurrents +/- 10% (ex: si moyenne = 1600 mots, viser 1440-1760), **avec un plancher absolu de 800 mots**. Si la moyenne des concurrents est inferieure a 800, viser 800 quand meme. Verifier avant le build : `wc -w content/fr/blog/[slug].md` et `wc -w content/en/blog/[slug-en].md`. En dessous de 800 mots sur l'une des deux langues, enrichir, ne pas publier.
 - Densite `kw` naturelle : 1-2%.
 - Variations et synonymes du `kw` dans les H2.
 - Mots-cles en **gras** quand pertinent.

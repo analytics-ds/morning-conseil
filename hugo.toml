@@ -13,6 +13,7 @@ defaultContentLanguageInSubdir = false
     languageCode = 'fr'
     languageName = 'Francais'
     weight = 1
+    contentDir = 'content/fr'
     [languages.fr.params]
       description = "Le guide pour choisir, amenager et faire vivre ses bureaux : location, coworking, salles de reunion, evenements et productivite"
   [languages.en]

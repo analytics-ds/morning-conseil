@@ -9,7 +9,7 @@ L'utilisateur tape `/create-article` ou demande de creer/rediger un article.
 ## Bilinguisme automatique (FR + EN)
 
 Tous les blogs generes par ce template sont bilingues (langue principale + anglais en sous-dossier `/en/`). Chaque article cree est donc systematiquement produit dans les deux langues, en parallele :
-- Version langue principale : `content/blog/[slug-fr].md`
+- Version langue principale : `content/fr/blog/[slug-fr].md`
 - Version anglaise : `content/en/blog/[slug-en].md`
 
 Les deux versions partagent un `translationKey` identique dans le frontmatter, ce qui permet a Hugo de generer automatiquement les liens hreflang et le language switcher.
@@ -45,7 +45,7 @@ Si le fichier `MEMORY.md` n'existe pas encore, le creer vide (il sera rempli a l
 Demander a l'utilisateur :
 - **Prompt GEO cible** : la question exacte que les utilisateurs posent aux moteurs IA generatifs (ChatGPT, Perplexity, Google AI Overviews). Ce prompt deviendra le **H1 de l'article**. C'est une question naturelle, pas un mot-cle optimise. Exemple : "Quel anti-moustique naturel choisir ?"
 - **Query fan-out (mot-cle SEO)** : le terme SEO sur lequel l'article se positionne dans Google. Il decoule du prompt et represente la recherche "classique" associee. Exemple : "huile essentielle anti moustique". Si l'utilisateur ne fournit pas de query fan-out, la determiner a partir du prompt en choisissant un mot-cle avec du volume de recherche.
-- **Categorie** : dans quelle categorie du blog ? (proposer les categories existantes du site, definies dans hugo.toml ou visibles dans content/blog/). L'utilisateur DOIT choisir une categorie, ne pas passer cette etape.
+- **Categorie** : dans quelle categorie du blog ? (proposer les categories existantes du site, definies dans hugo.toml ou visibles dans content/fr/blog/). L'utilisateur DOIT choisir une categorie, ne pas passer cette etape.
 
 **Note multilingue** : le consultant fournit ces infos dans la langue principale du site. La query fan-out et le prompt seront automatiquement traduits en anglais par Claude au moment de la redaction de la version EN (avec recherche de mots-cles SEO pertinents en anglais, pas une simple traduction litterale).
 
@@ -180,7 +180,7 @@ Afficher au consultant le chemin de l'image telechargee et proposer de la visual
 
 ### Analyse du site
 
-Lister tous les articles existants dans `content/blog/` en lisant le sitemap (`content/plan-du-site.md` ou directement les fichiers dans `content/blog/`). Pour chaque article existant, noter :
+Lister tous les articles existants dans `content/fr/blog/` en lisant le sitemap (`content/fr/plan-du-site.md` ou directement les fichiers dans `content/fr/blog/`). Pour chaque article existant, noter :
 - Le titre
 - Le mot-cle principal (visible dans le title et le nom du fichier)
 - La categorie
@@ -217,7 +217,7 @@ Lire le template correspondant dans `.claude/templates/articles/[type-choisi].md
 
 1. **Passe 1 — Langue principale (ex: FR)** :
    - Rediger l'article complet dans la langue principale selon les regles ci-dessous
-   - Fichier : `content/blog/[slug-fr].md`
+   - Fichier : `content/fr/blog/[slug-fr].md`
 2. **Passe 2 — Anglais** :
    - Traduire l'article en anglais avec un vocabulaire SEO approprie (pas une traduction litterale, mais une adaptation SEO : rechercher les mots-cles anglais pertinents pour le sujet)
    - Adapter les exemples culturels si necessaire (ex: marques locales, references culturelles)
@@ -284,7 +284,7 @@ Lire les commentaires HTML `<!-- NOTES POUR CLAUDE -->` en bas du template chois
 
 ## Etape 4 — Verification (checklist) — a appliquer aux DEUX versions FR + EN
 
-- [ ] Les 2 versions sont creees (FR dans `content/blog/`, EN dans `content/en/blog/`)
+- [ ] Les 2 versions sont creees (FR dans `content/fr/blog/`, EN dans `content/en/blog/`)
 - [ ] Les 2 versions partagent le meme `translationKey` dans le frontmatter
 - [ ] Slug = query fan-out en minuscules, tirets, sans accents, dans la langue de l'article
 - [ ] Title = prompt GEO cible (question naturelle dans la langue de l'article), < 60 caracteres

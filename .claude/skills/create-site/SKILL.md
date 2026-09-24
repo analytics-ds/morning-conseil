@@ -152,13 +152,13 @@ Le partial `seo-head.html` genere automatiquement :
 ## Etape 5 — Creer le contenu initial
 
 ### Page d'accueil
-Creer `content/_index.md` avec le frontmatter du site.
+Creer `content/fr/_index.md` avec le frontmatter du site.
 
 ### Page liste blog
-Creer `content/blog/_index.md`.
+Creer `content/fr/blog/_index.md`.
 
 ### Page plan du site (sitemap HTML)
-Creer `content/plan-du-site.md` :
+Creer `content/fr/plan-du-site.md` :
 ```markdown
 ---
 title: "Plan du site"

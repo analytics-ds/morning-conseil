@@ -22,7 +22,7 @@ Tous les fichiers de reference sont dans `.claude/templates/seo/`. **Toujours li
 
 - **Template** : `.claude/templates/seo/llms.txt`
 - **Destination** : `static/llms.txt`
-- Remplacer les variables avec les informations du site (lire le CLAUDE.md et les articles existants dans `content/blog/`)
+- Remplacer les variables avec les informations du site (lire le CLAUDE.md et les articles existants dans `content/fr/blog/`)
 - Variables a remplacer : `{{SITE_NAME}}`, `{{SITE_DESCRIPTION}}`, `{{SITE_ABOUT}}`, `{{CATEGORIES_LIST}}`, `{{RECENT_ARTICLES}}`, `{{BASE_URL}}`
 
 ### 3. Configuration sitemap
@@ -47,7 +47,7 @@ Hugo genere automatiquement le `sitemap.xml` au build. La balise `<lastmod>` de 
 
 - **Template** : `.claude/templates/layouts/sitemap-html.html`
 - **Destination** : `themes/[theme]/layouts/_default/sitemap-html.html`
-- **Page de contenu** : `content/plan-du-site.md`
+- **Page de contenu** : `content/fr/plan-du-site.md`
 
 Le sitemap HTML est une page visible du site qui liste toutes les pages par categorie avec la date de derniere modification. Utile pour :
 - Les visiteurs qui cherchent une page
@@ -69,7 +69,7 @@ layout: "sitemap-html"
 description: "Retrouvez toutes les pages et articles de [NOM DU SITE]"
 ---
 ```
-Ecrire ce fichier dans `content/plan-du-site.md`.
+Ecrire ce fichier dans `content/fr/plan-du-site.md`.
 
 3. Ajouter un lien dans le footer vers `/plan-du-site/`
 
@@ -145,6 +145,6 @@ Apres execution :
 - [ ] `static/robots.txt` existe, contient le bon sitemap URL
 - [ ] `static/llms.txt` existe, decrit correctement le site et liste les articles
 - [ ] `hugo.toml` contient la config sitemap, RSS et auteur
-- [ ] Le sitemap HTML est en place (`content/plan-du-site.md` + layout)
+- [ ] Le sitemap HTML est en place (`content/fr/plan-du-site.md` + layout)
 - [ ] Le partial `seo-head.html` est present et inclus dans `baseof.html`
 - [ ] Build Hugo OK (`hugo`)

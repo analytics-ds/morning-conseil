@@ -85,7 +85,7 @@ Ce repo ne contient pas de site. Il contient les **instructions et templates** p
   - `camille-deshayes` — Camille Deshayes, location de bureaux et coworking
   - `antoine-riviere` — Antoine Riviere, amenagement, space planning et salles de reunion
   - `helene-morvan` — Helene Morvan, evenementiel d'entreprise et productivite
-- **Convention auteur** : le frontmatter porte `author: <slug>` (ex: `author: camille-deshayes`). Le slug doit exister comme cle dans `data/authors.yaml` ET avoir sa page `content/authors/<slug>/_index.md` (FR) + `content/en/authors/<slug>/_index.md` (EN), avec `layout: single` dans le frontmatter (sinon Hugo applique la liste des auteurs a la place de la fiche). Choisir l'auteur selon la categorie et les `topics` declares dans le YAML
+- **Convention auteur** : le frontmatter porte `author: <slug>` (ex: `author: camille-deshayes`). Le slug doit exister comme cle dans `data/authors.yaml` ET avoir sa page `content/fr/authors/<slug>/_index.md` (FR) + `content/en/authors/<slug>/_index.md` (EN), avec `layout: single` dans le frontmatter (sinon Hugo applique la liste des auteurs a la place de la fiche). Choisir l'auteur selon la categorie et les `topics` declares dans le YAML
 
 ### Angle editorial
 
@@ -172,12 +172,12 @@ dans le `with` : `{{ $alt := .Params.imageAlt | default .Title }}`.
 ## Regles generales
 
 - Toujours utiliser `relURL` dans les templates Hugo pour les liens (compatibilite GitHub Pages)
-- Les articles vont dans `content/blog/`
+- Les articles FR vont dans `content/fr/blog/` (langue par defaut isolee par `contentDir = 'content/fr'`, voir le piege plus bas), les EN dans `content/en/blog/`
 - Les slugs sont en minuscules, sans accents, mots separes par des tirets
 - Ne JAMAIS utiliser `&` dans les noms de categories ou de tags — toujours remplacer par "et" (Hugo genere un double tiret `--` dans le slug, ce qui casse les URLs)
 - Le ton des articles est impersonnel (pas de je/tu/nous/vous) sauf instruction contraire
 - Les specs d'article (mots minimum, H2, blocs obligatoires) dependent du type choisi — lire les `<!-- NOTES POUR CLAUDE -->` dans chaque template d'article
-- **Longueur minimum des articles evergreen : 800 mots par langue.** Regle imposee par Manon, non negociable. Si le sujet ne permet pas d'atteindre 800 mots sans remplissage, elargir l'angle plutot que de diluer. Verifier avant publication : `wc -w content/blog/<slug>.md` et `wc -w content/en/blog/<slug>.md`
+- **Longueur minimum des articles evergreen : 800 mots par langue.** Regle imposee par Manon, non negociable. Si le sujet ne permet pas d'atteindre 800 mots sans remplissage, elargir l'angle plutot que de diluer. Verifier avant publication : `wc -w content/fr/blog/<slug>.md` et `wc -w content/en/blog/<slug>.md`
 - **Images d'article : toujours utiliser une photo reelle du site morning.fr**, jamais de banque d'images. Methode dans la section "Images des articles" plus bas
 - Chaque article doit contenir au minimum 3 liens internes contextuels vers d'autres articles du blog. L'ancre de chaque lien doit contenir le mot-cle principal de l'article cible
 - L'auteur est ajoute automatiquement dans le frontmatter et affiche sur la page (configure dans `hugo.toml [params]`)
@@ -266,7 +266,7 @@ Page `/authors/<slug-auteur>/` qui liste automatiquement tous les articles dont 
 
 ### 4. La liste du blog
 
-Page `/blog/` qui liste les articles par date decroissante. Hugo l inclut automatiquement si le fichier est dans `content/blog/` (FR) ou `content/en/blog/` (EN).
+Page `/blog/` qui liste les articles par date decroissante. Hugo l inclut automatiquement si le fichier est dans `content/fr/blog/` (FR) ou `content/en/blog/` (EN).
 
 ### 5. Le JSON-LD Article (SEO / schema.org)
 
@@ -378,7 +378,7 @@ Chaque entree decrit 1 article a publier. L'humain edite `kw`, `category`, `sche
 | Amenagement | `/categories/amenagement/` | Workspace design | `/en/categories/workspace-design/` |
 | Productivite | `/categories/productivite/` | Productivity | `/en/categories/productivity/` |
 
-**Attention sur "Organisation evenement"** : le frontmatter porte la valeur SANS apostrophe (`Organisation evenement`), sinon Hugo genere le slug `organisation-devenement`. Le libelle affiche (`Organisation d'evenement`) est recupere depuis `content/categories/organisation-evenement/_index.md` via le partial `category-label.html`. Ne jamais mettre d'apostrophe dans une valeur de taxonomie.
+**Attention sur "Organisation evenement"** : le frontmatter porte la valeur SANS apostrophe (`Organisation evenement`), sinon Hugo genere le slug `organisation-devenement`. Le libelle affiche (`Organisation d'evenement`) est recupere depuis `content/fr/categories/organisation-evenement/_index.md` via le partial `category-label.html`. Ne jamais mettre d'apostrophe dans une valeur de taxonomie.
 
 ### Modifier la roadmap
 
@@ -394,3 +394,13 @@ Demander a Claude "ajoute ces KW a la roadmap Morning Conseil" marche aussi, il 
 - `MEMORY.md` a la racine du blog : ligne par article avec suffixe `| auto` pour les articles generes par cette skill (vs les articles manuels via `/create-article`)
 - Logs : `.claude/logs/create-article-auto-[date].log` (rotation 30 derniers)
 
+
+## Piege : la langue par defaut doit avoir son propre contentDir
+
+Jusqu'au 2026-09-24, le FR n'avait pas de `contentDir` : il lisait donc tout `content/`,
+y compris `content/en/`. Consequences en production : les articles EN apparaissaient
+sur les pages categorie FR, le sitemap FR listait 18 URLs EN, et des categories EN
+(`/categories/office-rental/`) etaient generees a la racine FR. Correctif en place :
+le FR vit dans `content/fr/` avec `contentDir = 'content/fr'`. Les URLs ne changent pas
+(`defaultContentLanguageInSubdir = false`). Ne jamais recreer de fichier directement
+sous `content/` hors de `fr/` et `en/`.
