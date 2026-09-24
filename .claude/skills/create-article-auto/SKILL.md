@@ -248,7 +248,7 @@ Injecter l'ID-slug dans le frontmatter (`author: [id]`). Meme ID pour FR et EN.
 
 **Pas de banque d'images.** L'image vient toujours d'une photo d'un espace Morning, recuperee sur morning.fr. Regle imposee par Manon.
 
-1. Verifier d'abord si une photo pertinente est deja dans `static/images/blog/` ou `static/images/hero/` : `ls static/images/blog static/images/hero`. Si oui, la reutiliser, ne rien telecharger.
+1. **Ne jamais reutiliser une photo deja attribuee a un autre article.** Lister les photos deja prises (`grep -h '^image:' content/*/blog/*.md`) et en telecharger une nouvelle. Comparer visuellement la candidate aux fichiers de `static/images/` : Webflow sert la meme photo sous plusieurs variantes (`-p-800`, `-p-1080`, originale) dont les fichiers et les md5 different, un controle par nom ou par md5 ne suffit pas. Ecarter les rendus 3D marques « visuel non contractuel ». Regle posee par Manon le 2026-09-24 apres 5 photos reutilisees sur 11 articles.
 2. Sinon, choisir une page source morning.fr coherente avec la `category` :
 
 | Categorie | Page source morning.fr |

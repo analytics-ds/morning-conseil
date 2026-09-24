@@ -3,12 +3,12 @@ title: "Centre d'affaires : définition, services et prix"
 h1: "Centre d'affaires : ce que c'est et ce que ça coûte"
 description: "Centre d'affaires : la définition exacte, les services inclus, les tarifs constatés à Paris et les différences avec le coworking et le bail 3/6/9."
 date: 2026-09-22
-lastmod: 2026-09-22
+lastmod: 2026-09-24
 translationKey: "post-business-centre"
 categories: ["Location de bureaux"]
 tags: ["centre d affaires", "bureaux equipes", "domiciliation", "bail commercial"]
-image: "/images/blog/espace-travail-equipe-morning.webp"
-imageAlt: "Espace de travail partagé et équipé dans un centre Morning à Paris"
+image: "/images/blog/accueil-comptoir-morning.webp"
+imageAlt: "Comptoir d'accueil d'un immeuble Morning, entouré de jardinières et de suspensions lumineuses"
 imageCredit: "Morning"
 author: "camille-deshayes"
 toc: true

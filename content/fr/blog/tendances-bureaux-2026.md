@@ -2,12 +2,12 @@
 title: "Tendances bureaux 2026 : ce qui change vraiment l'amenagement"
 description: "Espaces hybrides, sobriete energetique, technologie embarquee : les tendances d'amenagement de bureaux qui structurent reellement 2026, au-dela des effets d'annonce."
 date: 2026-09-14
-lastmod: 2026-09-14
+lastmod: 2026-09-24
 translationKey: "post-office-trends-2026"
 categories: ["Amenagement"]
 tags: ["amenagement", "tendances", "bureaux"]
-image: "/images/blog/conseil-amenagement-morning.webp"
-imageAlt: "Espace de travail amenage dans un lieu Morning, illustrant les tendances bureaux 2026"
+image: "/images/blog/espace-amenage-arches-morning.webp"
+imageAlt: "Espace de travail aménagé par Morning, avec grande table en bois, plantes et arches bleues"
 author: "antoine-riviere"
 toc: true
 enBref:

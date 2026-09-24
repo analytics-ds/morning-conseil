@@ -7,8 +7,8 @@ lastmod: 2026-09-24
 translationKey: "post-meilleurs-coworking-paris"
 categories: ["Coworking"]
 tags: ["coworking", "paris", "classement", "comparatif", "espace de travail"]
-image: "/images/blog/coworking-zone-de-partage-morning.webp"
-imageAlt: "Comptoir café et zone de partage d'un espace de coworking Morning à Paris, avec des coworkers installés en arrière-plan"
+image: "/images/blog/coworking-open-space-equipes-morning.webp"
+imageAlt: "Open space de coworking Morning à Paris, avec tables partagées, fauteuils et coworkers au travail"
 imageCredit: "Morning"
 author: "camille-deshayes"
 toc: true

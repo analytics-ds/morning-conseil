@@ -3,12 +3,12 @@ title: "Bureaux du futur : les tendances qui se dessinent deja"
 h1: "Quelles sont les tendances pour les bureaux du futur ?"
 description: "Flex office, télétravail, décret tertiaire, confort : les tendances qui redessinent les bureaux d'ici 2030, chiffres et échéances à l'appui."
 date: 2026-09-15
-lastmod: 2026-09-15
+lastmod: 2026-09-24
 translationKey: "post-future-office-trends"
 categories: ["Location de bureaux"]
 tags: ["bureaux", "tendances", "flex office", "immobilier tertiaire"]
-image: "/images/blog/design-espace-travail-morning.webp"
-imageAlt: "Espace de travail contemporain dans un lieu Morning à Paris"
+image: "/images/blog/salon-verriere-morning.webp"
+imageAlt: "Salon lumineux sous verrière dans un espace Morning, avec canapés et plantes"
 imageCredit: "Morning"
 author: "camille-deshayes"
 toc: true

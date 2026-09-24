@@ -2,12 +2,12 @@
 title: "Private office or open space: how to choose"
 description: "The criteria that actually settle the question: confidentiality, call density, budget and growth pace."
 date: 2026-08-18
-lastmod: 2026-09-01
+lastmod: 2026-09-24
 translationKey: "post-private-office-vs-open-space"
 categories: ["Office rental"]
 tags: ["offices", "organisation"]
-image: "/images/blog/bureau-privatif-morning.webp"
-imageAlt: "Private office inside a Morning space"
+image: "/images/blog/open-space-verriere-morning.webp"
+imageAlt: "Large Morning open space under a glass roof, with shared desks and a person working on a laptop"
 author: "camille-deshayes"
 toc: true
 enBref:

@@ -3,12 +3,12 @@ title: "Bringing employees back to the office: why and how"
 h1: "Why and how should you bring employees back to the office?"
 description: "Why and how to bring employees back to the office: what the figures show, the levers that work and the mistakes to avoid."
 date: 2026-09-15
-lastmod: 2026-09-15
+lastmod: 2026-09-24
 translationKey: "post-return-to-office"
 categories: ["Productivity"]
 tags: ["remote work", "hybrid", "organization", "offices"]
-image: "/images/blog/coworking-espace-morning.webp"
-imageAlt: "Employees at work in a shared Morning space in Paris"
+image: "/images/blog/espace-commun-arcades-morning.webp"
+imageAlt: "Morning common area with tiled arches, where employees sit together and talk"
 imageCredit: "Morning"
 author: "helene-morvan"
 toc: true

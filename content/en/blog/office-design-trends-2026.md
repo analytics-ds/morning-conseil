@@ -2,12 +2,12 @@
 title: "Office design trends 2026: what's actually changing"
 description: "Hybrid layouts, energy sobriety, embedded technology: the office design trends that genuinely shape 2026, beyond the usual buzzwords."
 date: 2026-09-14
-lastmod: 2026-09-14
+lastmod: 2026-09-24
 translationKey: "post-office-trends-2026"
 categories: ["Workspace design"]
 tags: ["office design", "trends", "workspace"]
-image: "/images/blog/conseil-amenagement-morning.webp"
-imageAlt: "Workspace fitted out in a Morning location, illustrating 2026 office trends"
+image: "/images/blog/espace-amenage-arches-morning.webp"
+imageAlt: "Workspace designed by Morning, with a large wooden table, plants and blue arches"
 author: "antoine-riviere"
 toc: true
 enBref:

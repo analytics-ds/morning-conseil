@@ -3,12 +3,12 @@ title: "Offices of the future: the trends already taking shape"
 h1: "What are the trends for the offices of the future?"
 description: "Flex office, hybrid work, energy regulation, comfort: the trends reshaping offices by 2030, with figures and deadlines to back them up."
 date: 2026-09-15
-lastmod: 2026-09-15
+lastmod: 2026-09-24
 translationKey: "post-future-office-trends"
 categories: ["Office rental"]
 tags: ["offices", "trends", "flex office", "commercial real estate"]
-image: "/images/blog/design-espace-travail-morning.webp"
-imageAlt: "Contemporary workspace in a Morning location in Paris"
+image: "/images/blog/salon-verriere-morning.webp"
+imageAlt: "Bright lounge under a glass roof in a Morning space, with sofas and plants"
 imageCredit: "Morning"
 author: "camille-deshayes"
 toc: true

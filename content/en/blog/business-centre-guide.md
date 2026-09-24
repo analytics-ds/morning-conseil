@@ -3,12 +3,12 @@ title: "Business centre: definition, services and prices"
 h1: "Business centre: what it is and what it costs"
 description: "Business centre: the exact definition, the services included, the rates seen in Paris and how it differs from coworking and a 3/6/9 lease."
 date: 2026-09-22
-lastmod: 2026-09-22
+lastmod: 2026-09-24
 translationKey: "post-business-centre"
 categories: ["Office rental"]
 tags: ["business centre", "serviced office", "registered address", "commercial lease"]
-image: "/images/blog/espace-travail-equipe-morning.webp"
-imageAlt: "Shared and fully equipped workspace in a Morning centre in Paris"
+image: "/images/blog/accueil-comptoir-morning.webp"
+imageAlt: "Reception desk in a Morning building, surrounded by planters and pendant lights"
 imageCredit: "Morning"
 author: "camille-deshayes"
 toc: true

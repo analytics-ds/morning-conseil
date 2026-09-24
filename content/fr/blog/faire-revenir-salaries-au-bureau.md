@@ -3,12 +3,12 @@ title: "Faire revenir les salariés au bureau : pourquoi et comment"
 h1: "Pourquoi et comment faire revenir les salariés au bureau ?"
 description: "Pourquoi et comment faire revenir les salariés au bureau : ce que montrent les chiffres, les leviers efficaces et les erreurs à éviter."
 date: 2026-09-15
-lastmod: 2026-09-15
+lastmod: 2026-09-24
 translationKey: "post-return-to-office"
 categories: ["Productivite"]
 tags: ["télétravail", "hybride", "organisation", "bureaux"]
-image: "/images/blog/coworking-espace-morning.webp"
-imageAlt: "Salariés au travail dans un espace partagé Morning à Paris"
+image: "/images/blog/espace-commun-arcades-morning.webp"
+imageAlt: "Espace commun Morning aux arcades carrelées, avec des salariés attablés en train d'échanger"
 imageCredit: "Morning"
 author: "helene-morvan"
 toc: true

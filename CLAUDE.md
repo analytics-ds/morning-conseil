@@ -215,6 +215,7 @@ Pages riches en photos d'espaces : `/bureaux-coworking`, `/bureaux-coworking/<no
 ### Regles
 
 - Format `.webp`, largeur 1600px max, viser moins de 200 Ko
+- **Une photo = un seul article.** Deux articles ne partagent jamais la meme photo, meme sous deux noms de fichier differents (constate le 2026-09-24 : 5 photos etaient reutilisees sur 11 articles, dont une telechargee deux fois sous deux noms). Avant d'ajouter une image, verifier qu'elle n'est pas deja dans `static/images/` en comparant visuellement, pas seulement par nom ou md5 : Webflow sert la meme photo en plusieurs variantes (`-p-800`, `-p-1080`, originale) dont les fichiers different. Eviter aussi les rendus 3D marques « visuel non contractuel »
 - Rangement : `static/images/hero/` pour les hero, `static/images/blog/` pour les bannieres d'article
 - Nommage en kebab-case, descriptif de la photo (ex: `coworking-trevise-open-space.webp`), pas du slug de l'article
 - Choisir une photo coherente avec la categorie de l'article (salle de reunion pour un article salle de reunion, etc.)
