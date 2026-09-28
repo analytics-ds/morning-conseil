@@ -29,6 +29,7 @@
                     {{ end }}
                     {{ end }}
                     <li><a href="{{ if $isFR }}{{ "plan-du-site/" | relLangURL }}{{ else }}{{ "site-map/" | relLangURL }}{{ end }}">{{ if $isFR }}Plan du site{{ else }}Site map{{ end }}</a></li>
+                    {{ if and .Site.Params.ga4 hugo.IsProduction }}<li><a href="#" data-cookie-settings>{{ if $isFR }}Gérer les cookies{{ else }}Manage cookies{{ end }}</a></li>{{ end }}
                 </ul>
             </div>
         </div>

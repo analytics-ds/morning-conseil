@@ -1,0 +1,40 @@
+{{- /* Bandeau de consentement cookies, lie a analytics.html. Accepter et Refuser ont le meme poids. */ -}}
+{{- if and site.Params.ga4 hugo.IsProduction }}
+{{- $isFR := eq .Site.Language.Lang "fr" }}
+<div class="cookie-banner" id="cookie-banner" role="dialog" aria-live="polite" aria-label="{{ if $isFR }}Gestion des cookies{{ else }}Cookie settings{{ end }}" hidden>
+    <p class="cookie-banner__text">{{ if $isFR }}Nous utilisons des cookies de mesure d'audience (Google Analytics) pour comprendre comment ce site est consulté et l'améliorer. Aucun cookie publicitaire. Vous pouvez changer d'avis à tout moment via le lien « Gérer les cookies » en bas de page.{{ else }}We use audience measurement cookies (Google Analytics) to understand how this site is used and to improve it. No advertising cookies. You can change your mind at any time with the "Manage cookies" link at the bottom of the page.{{ end }}</p>
+    <div class="cookie-banner__actions">
+        <button type="button" class="cookie-banner__btn" data-consent="denied">{{ if $isFR }}Refuser{{ else }}Decline{{ end }}</button>
+        <button type="button" class="cookie-banner__btn" data-consent="granted">{{ if $isFR }}Accepter{{ else }}Accept{{ end }}</button>
+    </div>
+</div>
+<script>
+  (function () {
+    var b = document.getElementById('cookie-banner');
+    if (!b) return;
+    function show() { b.hidden = false; }
+    function save(v) {
+      try { localStorage.setItem('mc-consent', JSON.stringify({v: v, t: Date.now()})); } catch (e) {}
+      b.hidden = true;
+      if (v === 'granted') { window.mcLoadGA(); return; }
+      gtag('consent', 'update', {analytics_storage: 'denied'});
+      document.cookie.split(';').forEach(function (c) {
+        var n = c.split('=')[0].trim();
+        if (n.indexOf('_ga') === 0) {
+          ['', '; domain=' + location.hostname, '; domain=.' + location.hostname.split('.').slice(-2).join('.')].forEach(function (d) {
+            document.cookie = n + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/' + d;
+          });
+        }
+      });
+    }
+    b.addEventListener('click', function (e) {
+      var v = e.target.getAttribute('data-consent');
+      if (v) save(v);
+    });
+    document.addEventListener('click', function (e) {
+      if (e.target.closest('[data-cookie-settings]')) { e.preventDefault(); show(); }
+    });
+    if (!window.mcConsent()) show();
+  })();
+</script>
+{{- end }}
