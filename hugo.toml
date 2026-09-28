@@ -184,6 +184,8 @@ defaultContentLanguageInSubdir = false
   author_url = "https://conseil.morning.fr/"
   author_job_title = "Redaction bureaux et coworking"
   theme_name = "morning-conseil"
+  # Google Analytics 4, compte datashake (propriete properties/556177407)
+  ga4 = 'G-V7CRNN59XV'
 
 [sitemap]
   changefreq = 'weekly'

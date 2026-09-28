@@ -1973,3 +1973,52 @@ img { max-width: 100%; height: auto; display: block; }
     .plan-site-grid { grid-template-columns: 1fr; }
     .site-logo--img img { height: 24px; }
 }
+
+/* --- Bandeau cookies (partial consent.html) --- */
+.cookie-banner {
+    position: fixed;
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    z-index: 1000;
+    max-width: 44rem;
+    margin: 0 auto;
+    background-color: var(--grey-900);
+    color: var(--linen-400);
+    border-radius: 1.25rem;
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem 1.5rem;
+    box-shadow: 0 10px 30px rgba(16, 16, 15, 0.25);
+}
+
+.cookie-banner[hidden] { display: none; }
+
+.cookie-banner__text {
+    flex: 1 1 20rem;
+    margin: 0;
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+.cookie-banner__actions {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.cookie-banner__btn {
+    font-family: var(--font-ui);
+    font-weight: 500;
+    font-size: 0.9375rem;
+    background-color: var(--linen-400);
+    color: var(--grey-900);
+    border: 0;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-pill);
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.cookie-banner__btn:hover { background-color: var(--mango); }

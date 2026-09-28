@@ -1,0 +1,30 @@
+{{- /* Google Analytics 4, propriete "Morning Conseil (PBN GEO)" du compte GA4 datashake.
+     Mode de consentement "basique" : gtag.js n'est charge qu'apres acceptation dans le
+     bandeau (partial consent.html). Choix garde 6 mois dans localStorage (cle mc-consent).
+     N'est emis qu'en build de production (GitHub Actions), jamais en hugo server. */ -}}
+{{- with site.Params.ga4 }}{{ if hugo.IsProduction }}
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {analytics_storage: 'denied', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied'});
+      window.mcConsent = function () {
+        try {
+          var c = JSON.parse(localStorage.getItem('mc-consent'));
+          if (c && Date.now() - c.t < 1000 * 60 * 60 * 24 * 182) return c.v;
+        } catch (e) {}
+        return null;
+      };
+      window.mcLoadGA = function () {
+        if (window.mcGALoaded) return;
+        window.mcGALoaded = true;
+        gtag('consent', 'update', {analytics_storage: 'granted'});
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id={{ . }}';
+        document.head.appendChild(s);
+        gtag('js', new Date());
+        gtag('config', '{{ . }}');
+      };
+      if (window.mcConsent() === 'granted') window.mcLoadGA();
+    </script>
+{{- end }}{{ end }}
