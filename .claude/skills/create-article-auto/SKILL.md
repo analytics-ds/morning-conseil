@@ -11,7 +11,7 @@ Elle est destinee a etre declenchee par une routine planifiee (ex: 2x/semaine a 
 
 ## Pre-requis dans le blog
 
-- `.claude/roadmap.yaml` existe et contient au moins une entree `status: todo`.
+- `roadmap.yaml` existe et contient au moins une entree `status: todo`.
 - `hugo.toml` configure avec la langue principale + la langue EN.
 - `data/authors.yaml` present (systeme d'auteurs partage).
 - `content/fr/blog/` existe (peut etre vide pour un premier article).
@@ -37,7 +37,7 @@ Si une etape bloque (image introuvable, build Hugo echoue, push rejete apres reb
 | Mots-cles | Prompt GEO + query fan-out | Mot-cle SEO simple |
 | FAQ | Toujours (3+) | Seulement si la SERP en a (50%+ concurrents) |
 | "En bref" numerote | Oui (GEO) | Non |
-| Source KW | Demande a l'utilisateur | Lit `.claude/roadmap.yaml` |
+| Source KW | Demande a l'utilisateur | Lit `roadmap.yaml` |
 | Analyse concurrents | Manuelle ou absente | Automatique via l'API Datafer (structures Hn du top 10, contenu concurrent, NLP, PAA), sans WebFetch |
 | Validation | Humaine a chaque etape | Aucune |
 
@@ -49,7 +49,7 @@ Si une etape bloque (image introuvable, build Hugo echoue, push rejete apres reb
    git pull --rebase origin main
    ```
    Si echec : abort avec log clair.
-3. Lire `.claude/roadmap.yaml`.
+3. Lire `roadmap.yaml`.
 4. Filtrer les entrees :
    - `status == todo`
    - `scheduled_date <= today` (YYYY-MM-DD)
@@ -393,10 +393,18 @@ hugo
 - Si exit code non-zero : marquer `failed` avec log de l'erreur, abort.
 - Si OK : noter le nombre de pages generees.
 
+### 9.2 Verifier que les deux pages sont reellement dans le build
+
+```bash
+ls public/blog/[slug-fr]/index.html public/en/blog/[slug-en]/index.html
+```
+
+Un article ecrit hors du `contentDir` de sa langue (`content/fr/` et `content/en/` sur ce site) **n'est pas construit par Hugo, sans la moindre erreur de build** : `hugo` rend 0 et l'article part en 404 en production. Si un des deux fichiers manque, marquer `failed` avec l'erreur "page absente du build" **meme si `hugo` a rendu 0**.
+
 ## Etape 10 — Update roadmap et MEMORY.md
 
 ### Roadmap
-Mettre a jour l'entree traitee dans `.claude/roadmap.yaml` :
+Mettre a jour l'entree traitee dans `roadmap.yaml` :
 ```yaml
   status: done
   published_date: "[YYYY-MM-DD]"
@@ -434,13 +442,13 @@ A **n'importe quelle etape**, si un blocage survient :
      error: "[etape] [message d'erreur]"
    ```
 3. Si des fichiers article ont ete partiellement ecrits : les supprimer (revenir a l'etat pre-skill) pour ne pas laisser de brouillon dans `content/`.
-4. Commit uniquement le `.claude/roadmap.yaml` mis a jour, avec message `Auto: roadmap update (failed)`.
+4. Commit uniquement le `roadmap.yaml` mis a jour, avec message `Auto: roadmap update (failed)`.
 5. Push.
 6. Exit non-zero.
 
 L'entree `failed` n'est **pas retentee automatiquement** par les lancements suivants de la skill (elle reste en status `failed`). Damien passe manuellement la corriger et la repasser en `todo`.
 
-## Format de `.claude/roadmap.yaml`
+## Format de `roadmap.yaml`
 
 Voir le fichier `.claude/templates/roadmap-template.yaml` pour le squelette commente.
 
