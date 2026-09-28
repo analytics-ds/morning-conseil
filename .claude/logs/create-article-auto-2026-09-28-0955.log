@@ -1,0 +1,11 @@
+create-article-auto 2026-09-28
+kw: bureau assis debout | category: Amenagement | scheduled_date: 2026-09-25
+Mode analyse: websearch (DATAFER 401 cle invalide ; CrazySERP HTTP 500 "Failed to fetch search results")
+AIO: non verifiee
+Score Datafer: non mesure (mode websearch)
+Auteur: antoine-riviere (categorie Amenagement)
+Image: static/images/blog/postes-travail-equipe-mur-pierre-morning.webp (morning.fr /bureaux, 1600x1067, 163 Ko), credit Morning
+Liens internes: 4 FR (tendances-bureaux-2026, bureau-prive-ou-open-space, flex-office-mode-emploi, faire-revenir-salaries-au-bureau) + 4 EN
+Mots body: FR 1478, EN 1378
+Build: hugo OK sur conseil.morning.fr et baseURL de demo, 0 lien casse
+Exit: 0

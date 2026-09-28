@@ -64,10 +64,10 @@ articles:
   - kw: "bureau assis debout"
     category: "Amenagement"
     scheduled_date: "2026-09-25"
-    status: todo
-    published_date: null
-    published_url_fr: null
-    published_url_en: null
+    status: done
+    published_date: "2026-09-28"
+    published_url_fr: "https://conseil.morning.fr/blog/bureau-assis-debout/"
+    published_url_en: "https://conseil.morning.fr/en/blog/sit-stand-desk/"
     error: null
     # volume Haloscan : 1700/mois
 
