@@ -74,10 +74,10 @@ articles:
   - kw: "methode pomodoro"
     category: "Productivite"
     scheduled_date: "2026-09-28"
-    status: todo
-    published_date: null
-    published_url_fr: null
-    published_url_en: null
+    status: done
+    published_date: "2026-09-28"
+    published_url_fr: "https://conseil.morning.fr/blog/methode-pomodoro/"
+    published_url_en: "https://conseil.morning.fr/en/blog/pomodoro-technique/"
     error: null
     # volume Haloscan : 1727/mois
 
