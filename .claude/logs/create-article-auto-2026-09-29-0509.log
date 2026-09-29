@@ -1,0 +1,14 @@
+2026-09-29T05:09:55Z - Debut run. KW=jeux pour team building. Category=Organisation evenement
+Selection roadmap : entree deja publiee "methode pomodoro" trouvee sur origin/main (checkout local en HEAD detache/stale) : fast-forward local, aucun nouveau push necessaire pour cette entree.
+Entree traitee : jeux pour team building | Organisation evenement | scheduled_date 2026-09-29
+Mode d'analyse : datafer (brief ae043eac-48d4-49de-a1f6-f7025291fe7d, ready en 50 s)
+AIO : non declenchee (CrazySERP, 1 credit)
+PAA Datafer et CrazySERP : vides -> FAQ construite par jugement editorial (budget, duree, gratuit, distanciel, effectif)
+Auteur : helene-morvan ("team building" dans topics)
+Image : conseil-amenagement-morning.webp (deja telechargee, non attribuee, reutilisee)
+Liens internes (4) : budget-team-building, faire-revenir-salaries-au-bureau, amenager-salle-de-reunion, privatiser-un-lieu-seminaire
+Etape 7bis : score initial 51 vs moyenne concurrents 55 (meilleur 64) -> une passe sur keyword+placement (forme exacte "jeux pour team building" ajoutee title/H1/1er paragraphe/H2/description) -> score final 62
+Mots : 2396 FR, 2274 EN
+Correction avant build : liens internes EN ecrits initialement avec prefixe /en/ en dur, corriges en /blog/... par regle CLAUDE.md
+Build Hugo : exit 0, pages verifiees present dans public/ (FR + EN), sitemap FR/EN, plan de site FR/EN, page auteur, footer, llms.txt tous verifies sur prod baseURL et baseURL de demo
+Exit code : 0

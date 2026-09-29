@@ -84,10 +84,10 @@ articles:
   - kw: "jeux pour team building"
     category: "Organisation evenement"
     scheduled_date: "2026-09-29"
-    status: todo
-    published_date: null
-    published_url_fr: null
-    published_url_en: null
+    status: done
+    published_date: "2026-09-29"
+    published_url_fr: "https://conseil.morning.fr/blog/jeux-team-building/"
+    published_url_en: "https://conseil.morning.fr/en/blog/team-building-games/"
     error: null
     # volume Haloscan : 590/mois
 
